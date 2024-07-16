@@ -58,5 +58,6 @@ curl -o "$HOME"/.zshrc "https://raw.githubusercontent.com/farukerdem34/zsh-conf/
 /bin/zsh -i 
 
 echo 'Run the following command to set Z Shell default shell.'
-echo ' > sudo chsh $(whoami) -s $(command -v zsh)'
+
+chsh "$(whoami)" -s "$(command -v zsh)"
 

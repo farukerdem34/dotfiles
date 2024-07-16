@@ -2,9 +2,6 @@
 
 p_manager="None"
 install_curl=false
-user=$user
-uid=$uid
-user_home=$HOME
 if command -v curl &> /dev/null
 then
 	install_curl=true
@@ -51,14 +48,11 @@ else
     echo "No known package manager found"
 fi
 
-zsh -i
+curl -o "$HOME"/.p10k.zsh "https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/.p10k.zsh"
 
-sudo sed -i "s:$user\:x\:$uid\:$uid\:$user\:$user_home\:/bin/bash:$user\:x\:$uid\:$uid\:$user\:$user_home\:/bin/zsh:" /etc/passwd
+curl -o "$HOME"/.zcompdump "https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/.zcompdump"
 
-curl -o $HOME/.p10k.zsh "https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/.p10k.zsh"
+curl -o "$HOME"/.zshrc "https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/.zshrc"
 
-curl -o $HOME/.zcompdump "https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/.zcompdump"
-
-curl -o $HOME/.zshrc "https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/.zshrc"
-
-zsh -c source $HOME/.zshrc
+#!/bin/zsh
+/bin/zsh -i 

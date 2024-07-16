@@ -2,6 +2,9 @@
 
 p_manager="None"
 install_curl=false
+user=$user
+uid=$uid
+user_home=$HOME
 if command -v curl &> /dev/null
 then
 	install_curl=true
@@ -9,75 +12,46 @@ fi
 
 if command -v apt &> /dev/null
 then
-    echo "apt is available"
-    p_manager="apt"
+	echo "apt is available"
+        sudo apt-get install zsh -y
+	if install_curl
+	then
+		echo Installing curl
+		sudo apt-get install curl -y
+	fi
 elif command -v dnf &> /dev/null
+	then
+	    echo "dnf is available"
+	    p_manager="dnf"
+	elif command -v yum &> /dev/null
+	sudo dnf install zsh -y
+	if install_curl
+	then
+		echo Installing curl
+		sudo dnf install curl -y
+	fi
 then
-    echo "dnf is available"
-    p_manager="dnf"
-elif command -v yum &> /dev/null
-then
-    echo "yum is available"
-    p_manager="yum"
+	echo "yum is available"
+	sudo yum install zsh -y
+	if install_curl
+	then
+		echo Installing curl
+		sudo yum install curl -y
+	fi
 elif command -v pacman &> /dev/null
 then
-    echo "pacman is available"
-    p_manager="pacman"
-elif command -v zypper &> /dev/null
-then
-    echo "zypper is available"
-    p_manager="zypper"
+	echo "pacman is available"
+	sudo pacman -S zsh --noconfirm
+	if install_curl
+	then
+	echo Installing curl
+		sudo pacman -S curl --noconfirm
+	fi
 else
     echo "No known package manager found"
 fi
 
-case p_manager in 
-	"apt")
-		sudo apt-get install zsh -y
-		if install_curl
-		then
-			echo Installing curl
-			sudo apt-get install curl -y
-		fi
-		;;
-	"dnf")
-		sudo dnf install zsh -y
-		if install_curl
-		then
-			echo Installing curl
-			sudo dnf install curl -y
-		fi
-		;;
-
-	"yum")
-		sudo yum install zsh -y
-		if install_curl
-		then
-			echo Installing curl
-			sudo yum install curl -y
-		fi
-		;;
-
-	"pacman")
-		sudo pacman -S zsh --noconfirm
-		if install_curl
-		then
-			echo Installing curl
-			sudo pacman -S curl --noconfirm
-		fi
-		;;	
-
-	"zypper")
-		sudo zypper install zsh
-		if install_curl
-		then
-			echo Installing curl
-			sudo zypper install curl
-		fi
-		;;
-esac
-
-chsh $(whoami) -s $(which zsh)
+sudo sed -i "s:$user\:x\:$uid\:$uid\:$user\:$user_home\:/bin/bash:$user\:x\:$uid\:$uid\:$user\:$user_home\:/bin/zsh:" /etc/passwd
 
 curl -o $HOME/.p10k.zsh "https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/.p10k.zsh"
 

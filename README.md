@@ -1,6 +1,6 @@
 
 ```bash
-curl https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/setup | bash
+curl https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/setup > /tmp/setup && bash /tmp/setup
 ```
 
 

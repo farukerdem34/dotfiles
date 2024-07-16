@@ -75,7 +75,7 @@ case p_manager in
 			sudo zypper install curl
 		fi
 		;;
-
+esac
 
 chsh $(whoami) -s $(which zsh)
 

@@ -1,10 +1,10 @@
-```bash
-sudo apt-get install zsh -y
-```
 
 ```bash
-sudo dnf install zsh -y
+curl https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/setup | bash
 ```
+
+
+Manual Setup
 
 ```bash
 chsh your_username -s $(which zsh) 

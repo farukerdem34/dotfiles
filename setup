@@ -59,4 +59,4 @@ curl -o $HOME/.zcompdump "https://raw.githubusercontent.com/farukerdem34/zsh-con
 
 curl -o $HOME/.zshrc "https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/.zshrc"
 
-source $HOME/.zshrc
+zsh -c source $HOME/.zshrc

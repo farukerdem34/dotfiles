@@ -51,6 +51,8 @@ else
     echo "No known package manager found"
 fi
 
+zsh -i
+
 sudo sed -i "s:$user\:x\:$uid\:$uid\:$user\:$user_home\:/bin/bash:$user\:x\:$uid\:$uid\:$user\:$user_home\:/bin/zsh:" /etc/passwd
 
 curl -o $HOME/.p10k.zsh "https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/.p10k.zsh"

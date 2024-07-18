@@ -14,5 +14,6 @@ chsh your_username -s $(which zsh)
 curl -o $HOME/.p10k.zsh "https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/.p10k.zsh" &&\
 curl -o $HOME/.zcompdump "https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/.zcompdump" &&\
 curl -o $HOME/.zshrc "https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/.zshrc" &&\
+echo "set-option -g default-shell /bin/zsh" >> ~/.tmux.conf &&\
 source $HOME/.zshrc
 ```

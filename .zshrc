@@ -22,6 +22,15 @@ zinit light zsh-users/zsh-autosuggestions
 autoload -U compinit && compinit
 
 alias ls='ls --color'
-alias ll='ls -lah --color'
+alias ll='ls -lh --color'
 alias nano='vim'
 alias vi='vim'
+
+export HISTFILE=.zshistory
+
+export PATH=/home/faruk/.local/share/zinit/polaris/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/faruk/.local/bin
+
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+bindkey "~" delete-char
+

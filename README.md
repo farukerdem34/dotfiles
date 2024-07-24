@@ -6,7 +6,9 @@ sudo chsh -s /bin/zsh $USER
 ```bash
 curl https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/setup | zsh 
 ```
-``bash
+
+Vim
+```bash
 curl -o $HOME/.vimrc https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/.vimrc &&\
 mkdir -p $HOME/.vim/autoload &&\
 mkdir -p $HOME/.vim/bundle &&\

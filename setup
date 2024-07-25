@@ -1,5 +1,14 @@
 curl -o $HOME/.p10k.zsh "https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/.p10k.zsh" &&\
 curl -o $HOME/.zcompdump "https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/.zcompdump" &&\
 curl -o $HOME/.zshrc "https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/.zshrc" &&\
+curl -o $HOME/.zsh_tweaks "https://github.com/farukerdem34/zsh-conf/raw/master/.zsh_tweaks" &&\
 curl -o $HOME/.tmux.conf "https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/.tmux.conf" &&\
-source $HOME/.zshrc
+curl -o $HOME/.vimrc https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/.vimrc &&\
+mkdir -p $HOME/.vim/autoload &&\
+mkdir -p $HOME/.vim/bundle &&\
+mkdir -p $HOME/.vim/pack &&\
+mkdir -p $HOME/.vim/plugged &&\
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim &&\
+echo "Plug 'morhetz/gruvbox'" >> $HOME/.vimrc &&\
+echo "Run \"vim -c \"PlugInstall\" to initiliate vim configurations."
+echo "Run \"source \$HOME/.zshrc\" lastly."

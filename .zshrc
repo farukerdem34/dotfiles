@@ -25,12 +25,9 @@ alias ls='ls --color'
 alias ll='ls -lh --color'
 alias nano='vim'
 alias vi='vim'
+alias vol='vol.py'
 
-export HISTFILE=.zshistory
+SAVEHIST=1000  # Save most-recent 1000 lines
+HISTFILE=~/.zsh_history
 
-export PATH=/home/faruk/.local/share/zinit/polaris/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/faruk/.local/bin
-
-bindkey "^[[1;5C" forward-word
-bindkey "^[[1;5D" backward-word
-bindkey "~" delete-char
-
+source $HOME/.zsh_tweaks

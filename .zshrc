@@ -31,3 +31,7 @@ SAVEHIST=1000  # Save most-recent 1000 lines
 HISTFILE=~/.zsh_history
 
 source $HOME/.zsh_tweaks
+
+# kubectl completions
+source <(kubectl completion zsh)
+source <(docker completion zsh)

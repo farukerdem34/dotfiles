@@ -63,7 +63,3 @@ set wildmode=list:longest
 " Wildmenu will ignore files with these extensions.
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
-
-call plug#begin()
-Plug 'morhetz/gruvbox'
-call plug#end()

@@ -2,6 +2,5 @@
 cp $HOME/.zshrc .
 cp $HOME/.p10k.zsh .
 cp $HOME/.tmux.conf .
-cp -r $HOME/.vim .
 cp $HOME/.vimrc .
 cp $HOME/.zcompdump .

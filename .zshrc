@@ -33,5 +33,14 @@ HISTFILE=~/.zsh_history
 source $HOME/.zsh_tweaks
 
 # kubectl completions
-source <(kubectl completion zsh)
-source <(docker completion zsh)
+# source <(kubectl completion zsh)
+#
+if  command -v kubectl &> /dev/null;
+then 
+    source <(kubectl completion zsh)
+fi
+
+if command -v docker &> /dev/null;
+then
+    source <(docker completion zsh)
+fi

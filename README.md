@@ -24,14 +24,7 @@ curl https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/setup | zsh
 
 # Vim Configurations
 ```bash
-curl -o $HOME/.vimrc https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/.vimrc &&\
-mkdir -p $HOME/.vim/autoload &&\
-mkdir -p $HOME/.vim/bundle &&\
-mkdir -p $HOME/.vim/pack &&\
-mkdir -p $HOME/.vim/plugged &&\
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim &&\
-echo "Plug 'morhetz/gruvbox'" >> $HOME/.vimrc &&\
-vim -c "PlugInstall"
+curl -o $HOME/.vimrc https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/.vimrc 
 ```
 
 <img src="https://img.shields.io/badge/tmux-1BB91F?style=for-the-badge&logo=tmux&logoColor=white"> </img>

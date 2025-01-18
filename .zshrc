@@ -27,8 +27,9 @@ alias nano='vim'
 alias vi='vim'
 alias vol='vol.py'
 
-SAVEHIST=1000  # Save most-recent 1000 lines
 HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
 
 source $HOME/.zsh_tweaks
 
@@ -46,3 +47,5 @@ then
 fi
 
 export EDITOR=/usr/bin/vim
+source <(kompose completion zsh)
+source <(minikube completion zsh)

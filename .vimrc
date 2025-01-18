@@ -1,3 +1,6 @@
+call plug#begin()
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
+call plug#end()
 set nocompatible
 
 filetype on

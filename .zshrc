@@ -20,22 +20,21 @@ zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 
 autoload -U compinit && compinit
-
-alias ls='ls --color'
-alias ll='ls -lh --color'
+if command -v eza &> /dev/null;
+then
+    alias ll='eza -lh --icons=always --color=always'
+    alias ls='eza --icons=always --color=always'
+else
+    alias ls='ls --color'
+    alias ll='ls -lh --color'
+fi
 alias nano='vim'
 alias vi='vim'
-alias vol='vol.py'
 
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 
-source $HOME/.zsh_tweaks
-
-# kubectl completions
-# source <(kubectl completion zsh)
-#
 if  command -v kubectl &> /dev/null;
 then 
     source <(kubectl completion zsh)
@@ -46,6 +45,13 @@ then
     source <(docker completion zsh)
 fi
 
+if  command -v gh &> /dev/null;
+then 
+    source <(gh completion -s zsh)
+fi
+
 export EDITOR=/usr/bin/vim
-source <(kompose completion zsh)
-source <(minikube completion zsh)
+export PATH=$PATH:$HOME/.local/bin/
+alias wg='sudo wg'
+alias wg-quick='sudo wg-quick'
+

@@ -1,4 +1,0 @@
-bindkey "^[[1;5C" forward-word
-bindkey "^[[1;5D" backward-word
-bindkey "~" delete-char
-export PATH=export PATH=/home/faruk/.local/share/zinit/polaris/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/faruk/.local/bin

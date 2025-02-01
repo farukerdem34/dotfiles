@@ -56,4 +56,6 @@ export EDITOR=/usr/bin/vim
 export PATH=$PATH:$HOME/.local/bin/
 alias wg='sudo wg'
 alias wg-quick='sudo wg-quick'
-
+alias fastfetch='fastfetch -c $HOME/.config/fastfetch/config.jsonc'
+alias ff=fastfetch
+alias copilot='gh copilot explain '

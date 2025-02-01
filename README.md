@@ -33,3 +33,10 @@ curl -o $HOME/.vimrc https://raw.githubusercontent.com/farukerdem34/zsh-conf/mas
 ```
 curl -o $HOME/.tmux.conf "https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/.tmux.conf"
 ```
+
+# Kitty Configurations
+```bash
+mkdir -p $HOME/.config/kitty
+curl -o $HOME/.config/kitty/dark-theme.auto.conf https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/kitty/dark-theme.auto.conf &&\
+curl -o $HOME/.config/kitty/kitty.conf https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/kitty/kitty.conf &&\
+```

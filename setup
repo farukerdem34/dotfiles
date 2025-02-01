@@ -4,4 +4,7 @@ curl -o $HOME/.zshrc "https://raw.githubusercontent.com/farukerdem34/zsh-conf/ma
 curl -o $HOME/.zsh_tweaks "https://github.com/farukerdem34/zsh-conf/raw/master/.zsh_tweaks" &&\
 curl -o $HOME/.tmux.conf "https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/.tmux.conf" &&\
 curl -o $HOME/.vimrc https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/.vimrc &&\
+mkdir -p $HOME/.config/kitty
+curl -o $HOME/.config/kitty/dark-theme.auto.conf https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/kitty/dark-theme.auto.conf &&\
+curl -o $HOME/.config/kitty/kitty.conf https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/kitty/kitty.conf &&\
 echo "Run \"source \$HOME/.zshrc\" lastly."

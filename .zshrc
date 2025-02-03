@@ -56,6 +56,10 @@ if  [[ $TERM == "xterm-kitty" ]];
 then 
     alias ssh="kitty +kitten ssh"
 fi
+if  command -v yay &> /dev/null;
+then 
+    alias yayy='yay --noconfirm --color always '
+fi
 
 export EDITOR=/usr/bin/vim
 export PATH=$PATH:$HOME/.local/bin/

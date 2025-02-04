@@ -7,4 +7,5 @@ curl -o $HOME/.vimrc https://raw.githubusercontent.com/farukerdem34/zsh-conf/mas
 mkdir -p $HOME/.config/kitty
 curl -o $HOME/.config/kitty/dark-theme.auto.conf https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/.conf/kitty/dark-theme.auto.conf &&\
 curl -o $HOME/.config/kitty/kitty.conf https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/.config/kitty/kitty.conf &&\
+curl -o $HOME/.config/fastfetch/config.jsonc https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/.config/fastfetch/config.jsonc &&\
 echo "Run \"source \$HOME/.zshrc\" lastly."

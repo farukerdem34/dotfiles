@@ -42,6 +42,11 @@ then
     source <(kubectl completion zsh)
 fi
 
+if command -v fzf &> /dev/null;
+then
+    source <(fzf --zsh)
+fi
+
 if command -v docker &> /dev/null;
 then
     source <(docker completion zsh)
@@ -67,3 +72,6 @@ alias wg='sudo wg'
 alias wg-quick='sudo wg-quick'
 alias ff='fastfetch -c $HOME/.config/fastfetch/config.jsonc'
 alias copilot='gh copilot explain '
+alias bat='bat --color=always -p '
+alias fzf='fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'
+alias vimzf='vim $(fzf)'

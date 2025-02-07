@@ -72,6 +72,8 @@ alias wg='sudo wg'
 alias wg-quick='sudo wg-quick'
 alias ff='fastfetch -c $HOME/.config/fastfetch/config.jsonc'
 alias copilot='gh copilot explain '
-alias bat='bat --color=always -p '
+alias bat='bat --theme="Catppuccin Macchiato" --color=always -p '
+alias cat=bat
 alias fzf='fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'
 alias vimzf='vim $(fzf)'
+alias vim=nvim

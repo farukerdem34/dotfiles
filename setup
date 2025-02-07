@@ -1,11 +1,9 @@
-curl -o $HOME/.p10k.zsh "https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/.p10k.zsh" &&\
-curl -o $HOME/.zcompdump "https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/.zcompdump" &&\
-curl -o $HOME/.zshrc "https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/.zshrc" &&\
-curl -o $HOME/.zsh_tweaks "https://github.com/farukerdem34/zsh-conf/raw/master/.zsh_tweaks" &&\
-curl -o $HOME/.tmux.conf "https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/.tmux.conf" &&\
-curl -o $HOME/.vimrc https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/.vimrc &&\
-mkdir -p $HOME/.config/kitty
-curl -o $HOME/.config/kitty/dark-theme.auto.conf https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/.conf/kitty/dark-theme.auto.conf &&\
-curl -o $HOME/.config/kitty/kitty.conf https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/.config/kitty/kitty.conf &&\
-curl -o $HOME/.config/fastfetch/config.jsonc https://raw.githubusercontent.com/farukerdem34/zsh-conf/master/.config/fastfetch/config.jsonc &&\
-echo "Run \"source \$HOME/.zshrc\" lastly."
+#!/usr/bin/bash
+
+cp .p10k.zsh $HOME
+cp .zcompdump $HOME
+cp .zshrc $HOME
+cp .tmux.conf $HOME
+cp .vimrc $HOME
+cp -r .config/* $HOME/.config/
+/usr/bin/bat cache --build

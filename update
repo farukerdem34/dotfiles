@@ -6,3 +6,4 @@ cp $HOME/.vimrc .
 cp $HOME/.zcompdump .
 cp -r $HOME/.config/kitty .config/kitty
 cp $HOME/.config/fastfetch/config.jsonc .config/fastfetch/config.jsonc
+cp -r $HOME/.config/nvim .config/nvim

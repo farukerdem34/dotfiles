@@ -1,9 +1,0 @@
-#!/usr/bin/bash
-
-cp .p10k.zsh $HOME
-cp .zcompdump $HOME
-cp .zshrc $HOME
-cp .tmux.conf $HOME
-cp .vimrc $HOME
-cp -r .config/* $HOME/.config/
-/usr/bin/bat cache --build

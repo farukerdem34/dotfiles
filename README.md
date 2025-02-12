@@ -5,7 +5,7 @@ sudo apt update -y;sudo apt upgrade -y;sudo apt install stow neovim tmux bat fzf
 ```
 
 ```bash
-sudo pacman -Syu --noconfirm --color always stow neovim tmux bat fzf git gcc
+sudo pacman -Syu --noconfirm --color always stow neovim tmux bat fzf git gcc btop
 ```
 
 # Dotfiles

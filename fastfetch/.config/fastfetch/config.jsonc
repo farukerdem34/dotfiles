@@ -12,8 +12,8 @@
         "separator": " -> "
     },
     "modules": [
-        "title",
-        "separator",
+        //"title",
+        //"separator",
         {
             "type": "os",
             "key": " OS",

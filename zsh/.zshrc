@@ -71,6 +71,10 @@ then
     alias yayy='yay --noconfirm --color always '
 fi
 
+if command -v zoxide &> /dev/null;
+then
+  eval "$(zoxide init --cmd cd zsh)"
+fi
 export EDITOR=/usr/bin/vim
 export PATH=$PATH:$HOME/.local/bin/
 alias wg='sudo wg'

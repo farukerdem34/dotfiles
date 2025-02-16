@@ -11,7 +11,15 @@ sudo pacman -Syu --noconfirm --color always stow neovim tmux bat fzf git gcc bto
 # Dotfiles
 
 ```bash
-git clone https://github.com/farukerdem34/dotfiles.git $HOME/dotfiles
+git clone https://github.com/farukerdem34/dotfiles.git $HOME/.dotfiles
 cd $HOME/dotfiles/
 stow bat fastfetch kitty nvim tmux vimrc zsh
+```
+
+## For Servers
+
+```bash
+git clone https://github.com/farukerdem34/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles/
+bash init-server.sh
 ```

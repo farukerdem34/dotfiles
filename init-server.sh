@@ -4,7 +4,6 @@ sudo apt update -y
 sudo apt upgrade -y
 sudo apt install -y gcc make nvim stow tmux
 
-git clone https://github.com/farukerdem34/dotfiles $HOME/.dotfiles
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 cd $HOME/.dotfiles/

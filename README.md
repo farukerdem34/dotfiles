@@ -24,6 +24,15 @@ nvim --headless "+Lazy! sync" +qa
 . ~/.zshrc
 ```
 
+## For Desktop Users
+
+```bash
+git clone https://github.com/farukerdem34/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles/
+bash init-user.sh
+
+```
+
 ## For Servers
 
 ```bash

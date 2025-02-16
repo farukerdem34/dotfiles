@@ -14,6 +14,8 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 cd $HOME/.dotfiles/
 
+
+
 # Backup .bashrc
 if [[ -e $HOME/.bashrc ]]; then
   mv -u $HOME/.bashrc .bashrc.bak
@@ -25,18 +27,26 @@ if [[ -e $HOME/.tmux.conf ]]; then
 fi
 
 # Backup NeoVim Config
-if [[ -e $HOME/.config/nvim ]]; then
+if [[ -d $HOME/.config/nvim ]]; then
   tar -zcvf $HOME/.config/nvim.bak $HOME/.config/nvim  
 fi
 
 # Backup Kitty Config 
-if [[ -e $HOME/.config/kitty ]]; then
+if [[ -d $HOME/.config/kitty ]]; then
   tar -zcvf $HOME/.config/kitty.bak $HOME/.config/kitty
 fi
 
 # Backup fastfetch
-if [[ -e $HOME/.config/fastfetch ]]; then
+if [[ -d $HOME/.config/fastfetch ]]; then
   tar -zcvf $HOME/.config/fastfetch.bak $HOME/.config/fastfetch
+fi
+
+if [[ -d $HOME/.config/bat ]]; then
+  tar -zcvf $HOME/.config/bat.bak $HOME/.config/bat
+fi
+
+if [[ -d $HOME/.config/btop ]]; then
+  tar -zcvf $HOME/.config/btop.bak $HOME/.config/btop
 fi
 
 # Backup zsh

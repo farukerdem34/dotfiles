@@ -27,21 +27,13 @@ zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 
 autoload -U compinit && compinit
-if command -v eza &> /dev/null;
-then
-    alias ll='eza -lh --icons=always --color=always'
-    alias ls='eza --icons=always --color=always'
-else
-    alias ls='ls --color'
-    alias ll='ls -lh --color'
-fi
-alias nano='vim'
-alias vi='vim'
 
+# History
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 
+# Completion Sources
 if  command -v kubectl &> /dev/null;
 then 
     source <(kubectl completion zsh)
@@ -56,6 +48,20 @@ if command -v fzf &> /dev/null;
 then
     source <(fzf --zsh)
 fi
+
+
+# Aliases
+if command -v eza &> /dev/null;
+then
+    alias ll='eza -lh --icons=always --color=always'
+    alias ls='eza --icons=always --color=always'
+else
+    alias ls='ls --color'
+    alias ll='ls -lh --color'
+fi
+
+alias nano='vim'
+alias vi='vim'
 
 if command -v docker &> /dev/null;
 then

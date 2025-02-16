@@ -19,6 +19,9 @@ sudo pacman -Syu --noconfirm --color always stow neovim tmux bat fzf git gcc bto
 git clone https://github.com/farukerdem34/dotfiles.git $HOME/.dotfiles
 cd $HOME/dotfiles/
 stow bat fastfetch kitty nvim tmux vimrc zsh
+~/.tmux/plugins/tpm/bin/install_plugins
+nvim --headless "+Lazy! sync" +qa
+. ~/.zshrc
 ```
 
 ## For Servers

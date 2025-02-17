@@ -49,3 +49,5 @@ git clone https://github.com/farukerdem34/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles/
 bash init-server.sh
 ```
+
+> [wallpapers](https://github.com/farukerdem34/catppuccin-wallpapers)

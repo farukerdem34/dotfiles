@@ -53,3 +53,6 @@ bash init-server.sh
 
 # Wallpapers
 [farukerdem34/catppuccin-wallpapers](https://github.com/farukerdem34/catppuccin-wallpapers)
+
+# GTK Theme 
+[Fausto-Korpsvart/Catppuccin-GTK-Theme](https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme.git)

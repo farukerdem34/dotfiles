@@ -50,4 +50,6 @@ cd ~/.dotfiles/
 bash init-server.sh
 ```
 
-> [wallpapers](https://github.com/farukerdem34/catppuccin-wallpapers)
+
+# Wallpapers
+[farukerdem34/catppuccin-wallpapers](https://github.com/farukerdem34/catppuccin-wallpapers)

@@ -54,5 +54,8 @@ bash init-server.sh
 # Wallpapers
 [farukerdem34/catppuccin-wallpapers](https://github.com/farukerdem34/catppuccin-wallpapers)
 
-# GTK Theme 
+# GTK Theme & Icons
 [Fausto-Korpsvart/Catppuccin-GTK-Theme](https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme.git)
+
+# Cursor
+https://www.gnome-look.org/p/2260616

@@ -16,7 +16,7 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share/zinit/zinit.git}"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
 [ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 source "${ZINIT_HOME}/zinit.zsh"
-
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -60,7 +60,6 @@ else
     alias ls='ls --color'
     alias ll='ls -lh --color'
 fi
-
 alias nano='vim'
 alias vi='vim'
 
@@ -74,7 +73,7 @@ then
     source <(gh completion -s zsh)
 fi
 
-if  [[ $TERM == "xterm-kitty" ]];
+if [[ $TERM == "xterm-kitty" ]] ;
 then 
     alias ssh="kitty +kitten ssh"
 fi
@@ -87,28 +86,28 @@ if command -v zoxide &> /dev/null;
 then
   eval "$(zoxide init --cmd cd zsh)"
 fi
-
-if [[ command -v nvim &> /dev/null ]]; then
+if command -v nvim &> /dev/null; then
+  
+fi
 export EDITOR=/usr/bin/nvim
 alias vim=nvim
-fi
 
-if [[ command -v wg &> /dev/null ]]; then
+if  command -v wg &> /dev/null ; then
  alias wg='sudo wg'
 alias wg-quick='sudo wg-quick'
  
 fi
 
-if [[ command -v fastfetch &> /dev/null ]]; then
+if  command -v fastfetch &> /dev/null ; then
 alias ff='fastfetch -c $HOME/.config/fastfetch/config.jsonc'
 fi
 alias copilot='gh copilot explain '
-if [[ command -v bat &> /dev/null ]]; then
+if  command -v bat &> /dev/null ]]; then
   
 alias bat='bat --theme="Catppuccin Macchiato" --color=always -p '
 alias cat=bat
 fi
-if [[ command -v fzf &> /dev/null ]]; then
+if  command -v fzf &> /dev/null ; then
 alias fzf='fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'
 alias vimzf='vim $(fzf)'
 fi

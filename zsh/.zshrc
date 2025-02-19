@@ -112,3 +112,10 @@ alias fzf='fzf --preview "bat --color=always --style=numbers --line-range=:500 {
 alias vimzf='vim $(fzf)'
 fi
 
+if command -v lazygit &> /dev/null; then
+  alias lzg="lazygit"
+fi
+
+if command -v lazydocker &> /dev/null; then
+  alias lzd="lazydocker"
+fi

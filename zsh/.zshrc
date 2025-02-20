@@ -119,3 +119,5 @@ fi
 if command -v lazydocker &> /dev/null; then
   alias lzd="lazydocker"
 fi
+
+alias dc='docker compose'

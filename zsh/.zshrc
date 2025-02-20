@@ -86,30 +86,30 @@ if command -v zoxide &> /dev/null;
 then
   eval "$(zoxide init --cmd cd zsh)"
 fi
+
+
 if command -v nvim &> /dev/null; then
-  
+  export EDITOR=/usr/bin/nvim
+  alias vim=nvim
 fi
-export EDITOR=/usr/bin/nvim
-alias vim=nvim
 
 if  command -v wg &> /dev/null ; then
- alias wg='sudo wg'
-alias wg-quick='sudo wg-quick'
- 
+  alias wg='sudo wg'
+  alias wg-quick='sudo wg-quick'
 fi
 
 if  command -v fastfetch &> /dev/null ; then
 alias ff='fastfetch -c $HOME/.config/fastfetch/config.jsonc'
 fi
+
 alias copilot='gh copilot explain '
-if  command -v bat &> /dev/null ]]; then
-  
-alias bat='bat --theme="Catppuccin Macchiato" --color=always -p '
-alias cat=bat
+if  command -v bat &> /dev/null ; then
+  alias bat='bat --theme="Catppuccin Macchiato" --color=always -p '
+  alias cat=bat
 fi
 if  command -v fzf &> /dev/null ; then
-alias fzf='fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'
-alias vimzf='vim $(fzf)'
+  alias fzf='fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'
+  alias vimzf='vim $(fzf)'
 fi
 
 if command -v lazygit &> /dev/null; then

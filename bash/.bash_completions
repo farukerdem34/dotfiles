@@ -11,7 +11,7 @@ fi
 
 if command -v fzf &> /dev/null;
 then
-    source <(fzf --bash)
+eval "$(fzf --bash)"
 fi
 
 if command -v docker &> /dev/null;

@@ -1,5 +1,5 @@
 #!/bin/bash
-packages="stow neovim tmux bat fzf git gcc btop make fastfetch kitty zsh starship lazygit lazydocker"
+packages="stow neovim tmux bat fzf git gcc btop make fastfetch kitty zsh starship lazygit lazydocker zoxide"
 if command -v yay &>/dev/null; then
   yay -Syu $packages
 elif command -v pacman &>/dev/null; then

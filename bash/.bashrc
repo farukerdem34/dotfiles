@@ -30,7 +30,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-xterm-color) color_prompt=yes ;;
+xterm-kitty | kitty-xterm | xterm-color | *-256color) color_prompt=yes ;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -76,18 +76,13 @@ if [ -x /usr/bin/dircolors ]; then
   alias egrep='egrep --color=auto'
 fi
 
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 if [ -f ~/.bash_aliases ]; then
-  . ~/.bash_aliases
+  . $HOME/.bash_aliases
 fi
 
 # enable programmable completion features (you don't need to enable
@@ -96,7 +91,11 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
   . /etc/bash_completion
 fi
-alias dc='docker compose '
-alias lzg='lazygit '
-alias lzd='lazydocker '
-#alias vim=nvim
+
+if [[ -e ~/.bash_completions ]]; then
+  . $HOME/.bash_completions
+fi
+
+eval "$(starship init bash)"
+
+export _ZO_DOCTOR=0

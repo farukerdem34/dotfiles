@@ -3,11 +3,11 @@ packages='gcc make neovim stow tmux git curl'
 if command -v sudo &>/dev/null; then
   sudo apt update -y
   sudo apt upgrade -y
-  sudo apt install -y "$packages"
+  sudo apt install -y $packages
 else
   apt update -y
   apt upgrade -y
-  apt install -y "$packages"
+  apt install -y $packages
 fi
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -27,12 +27,15 @@ if [[ -e "$HOME"/.config/nvim ]]; then
   rm -rf "$HOME"/.config/nvim
 fi
 
-stow bash nvim tmux
+stow bash tmux
+
+# Uncomment the line if you want to use LazyVim in you server
+# stow nvim
 
 cd "$HOME" || exit
 ~/.tmux/plugins/tpm/bin/install_plugins
 
-nvim --headless "+Lazy! sync" +qa
+# nvim --headless "+Lazy! sync" +qa
 
 cd "$HOME" || exit
 

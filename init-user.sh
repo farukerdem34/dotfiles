@@ -1,68 +1,110 @@
 #!/bin/bash
-packages="stow neovim tmux bat fzf git gcc btop make fastfetch kitty zsh"
-if [[ command -v yay &> /dev/null ]]; then
+packages="stow neovim tmux bat fzf git gcc btop make fastfetch kitty zsh starship"
+if command -v yay &>/dev/null; then
   yay -Syu $packages
-elif [[ command -v pacman &> /dev/null ]]; then
-  sudo pacman -Syu $packages  
-elif [[ command -v apt &> /dev/null ]]; then
+elif command -v pacman &>/dev/null; then
+  sudo pacman -Syu $packages
+elif command -v apt &>/dev/null; then
   sudo apt update -y
   sudo apt install -y $packages
 fi
 
+git clone https://github.com/tmux-plugins/tpm "$HOME"/.tmux/plugins/tpm
 
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+cd "
 
-cd $HOME/.dotfiles/
-
-
+"/.dotfiles/
 
 # Backup .bashrc
-if [[ -e $HOME/.bashrc ]]; then
-  mv -u $HOME/.bashrc .bashrc.bak
+if [[ -e "
+
+"/.bashrc ]]; then
+  mv -u "
+
+"/.bashrc .bashrc.bak
 fi
 
 # Backup .tmux.conf
-if [[ -e $HOME/.tmux.conf ]]; then
-  mv -u $HOME/.tmux.conf .tmux.conf.bak
+if [[ -e "
+
+"/.tmux.conf ]]; then
+  mv -u "
+
+"/.tmux.conf .tmux.conf.bak
 fi
 
 # Backup NeoVim Config
-if [[ -d $HOME/.config/nvim ]]; then
-  tar -zcvf $HOME/.config/nvim.bak $HOME/.config/nvim  
+if [[ -d "
+
+"/.config/nvim ]]; then
+  tar -zcvf "
+
+"/.config/nvim.bak "
+
+"/.config/nvim
 fi
 
-# Backup Kitty Config 
-if [[ -d $HOME/.config/kitty ]]; then
-  tar -zcvf $HOME/.config/kitty.bak $HOME/.config/kitty
+# Backup Kitty Config
+if [[ -d "
+
+"/.config/kitty ]]; then
+  tar -zcvf "
+
+"/.config/kitty.bak "
+
+"/.config/kitty
 fi
 
 # Backup fastfetch
-if [[ -d $HOME/.config/fastfetch ]]; then
-  tar -zcvf $HOME/.config/fastfetch.bak $HOME/.config/fastfetch
+if [[ -d "
+
+"/.config/fastfetch ]]; then
+  tar -zcvf "
+
+"/.config/fastfetch.bak "
+
+"/.config/fastfetch
 fi
 
-if [[ -d $HOME/.config/bat ]]; then
-  tar -zcvf $HOME/.config/bat.bak $HOME/.config/bat
+if [[ -d "
+
+"/.config/bat ]]; then
+  tar -zcvf "
+
+"/.config/bat.bak "
+
+"/.config/bat
 fi
 
-if [[ -d $HOME/.config/btop ]]; then
-  tar -zcvf $HOME/.config/btop.bak $HOME/.config/btop
+if [[ -d "
+
+"/.config/btop ]]; then
+  tar -zcvf "
+
+"/.config/btop.bak "
+
+"/.config/btop
 fi
 
 # Backup zsh
-if [[ -e $HOME/.zshrc ]]; then
-  cp $HOME/.zshrc $HOME/.zshrc.bak
+if [[ -e "
+
+"/.zshrc ]]; then
+  cp "
+
+"/.zshrc "
+
+"/.zshrc.bak
 fi
 
-# Backup P10k 
-if [[ -e $HOME/.p10k.zsh ]]; then
-  cp $HOME/.p10k.zsh $HOME/.p10k.zsh.bak
-fi
+stow bash bat fastfetch kitty nvim btop tmux vimrc zsh starship
 
-stow bash bat fastfetch kitty nvim btop tmux vimrc zsh
+cd "
 
-cd $HOME
+"
 ~/.tmux/plugins/tpm/bin/install_plugins
 nvim --headless "+Lazy! sync" +qa
-cd $HOME
+cd "
+
+"
 . .bashrc

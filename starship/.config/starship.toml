@@ -1,7 +1,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 palette = 'catppuccin_mocha'
-
+add_newline = false
 [character]
 # Note the use of Catppuccin color 'peach'
 success_symbol = "[[󰄛](green) ❯](peach)"

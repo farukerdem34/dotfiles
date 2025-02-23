@@ -73,7 +73,7 @@ if [[ -e ~/.zsh_completion_sources.zsh ]]; then
   mv ~/.zsh_completion_sources.zsh ~/.zsh_completion_sources.zsh.bak
 fi
 
-stow neovim tmux bat btop fastfetch kitty zsh starship
+stow nvim tmux bat btop fastfetch kitty zsh starship
 
 ~/.tmux/plugins/tpm/bin/install_plugins
 

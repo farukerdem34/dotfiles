@@ -1,4 +1,4 @@
 .vim/plugged/*
 .vim/pack/default/*
 .vim/bundle/*
-
+*.bak

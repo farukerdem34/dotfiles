@@ -40,7 +40,6 @@ if  command -v fastfetch &> /dev/null ; then
 alias ff='fastfetch -c $HOME/.config/fastfetch/config.jsonc'
 fi
 
-alias copilot='gh copilot explain '
 if  command -v bat &> /dev/null ; then
   alias bat='bat --theme="Catppuccin Macchiato" --color=always -p '
   alias cat=bat

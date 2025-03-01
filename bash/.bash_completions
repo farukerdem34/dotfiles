@@ -1,12 +1,12 @@
 # Completion Sources
 if  command -v kubectl &> /dev/null;
 then 
-    source <(kubectl completion bash)
+eval "$(kubectl completion bash)"
 fi
 
 if  command -v hcloud &> /dev/null;
 then 
-    source <(hcloud completion bash)
+eval "$(hcloud completion bash)"
 fi
 
 if command -v fzf &> /dev/null;
@@ -16,10 +16,11 @@ fi
 
 if command -v docker &> /dev/null;
 then
-    source <(docker completion bash)
+eval "$(docker completion bash)"
 fi
 
-if  command -v gh &> /dev/null;
-then 
-    source <(gh completion -s bash)
+
+if command -v gh &>/dev/null; then
+  eval "$("gh completions -s bash")"
 fi
+

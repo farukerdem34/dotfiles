@@ -1,5 +1,5 @@
 #!/bin/bash
-packages='gcc make neovim stow tmux git curl'
+packages='gcc make neovim stow tmux git curl eza'
 if command -v sudo &>/dev/null; then
   sudo apt update -y
   sudo apt upgrade -y

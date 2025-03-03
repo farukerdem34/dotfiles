@@ -1,5 +1,6 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
+command_timeout = 120
 palette = 'catppuccin_mocha'
 add_newline = false
 [character]
@@ -169,5 +170,4 @@ symbol = " "
 
 [gradle]
 symbol = " "
-
 

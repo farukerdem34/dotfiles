@@ -18,12 +18,3 @@ if command -v docker &> /dev/null;
 then
     source <(docker completion zsh)
 fi
-
-if  command -v gh &> /dev/null;
-then 
-    source <(gh completion -s zsh)
-    source <(gh copilot alias zsh)
-fi
-
-
-

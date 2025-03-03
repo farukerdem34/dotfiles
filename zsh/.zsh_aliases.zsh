@@ -1,7 +1,7 @@
 # Aliases
 if command -v eza &> /dev/null;
 then
-    alias ll='eza -lh --icons=always --color=always'
+    alias ll='eza -lha --icons=always --color=always'
     alias ls='eza --icons=always --color=always'
 else
     alias ls='ls --color'

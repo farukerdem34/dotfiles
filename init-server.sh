@@ -1,5 +1,5 @@
 #!/bin/bash
-packages='gcc make neovim stow tmux git curl eza'
+packages='gcc make neovim stow tmux git curl eza zoxide gh'
 if command -v sudo &>/dev/null; then
   sudo apt update -y
   sudo apt upgrade -y
@@ -38,6 +38,19 @@ cd "$HOME" || exit
 # nvim --headless "+Lazy! sync" +qa
 
 cd "$HOME" || exit
+
+# Install Lazygit
+#
+LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | \grep -Po '"tag_name": *"v\K[^"]*')
+curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/download/v${LAZYGIT_VERSION}/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+tar xf lazygit.tar.gz lazygit
+sudo install lazygit -D -t /usr/local/bin/
+
+# Install Docker
+curl https://get.docker.com | bash
+
+# Install LazyDocker
+curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
 
 yes y | curl -sS https://starship.rs/install.sh | sh
 

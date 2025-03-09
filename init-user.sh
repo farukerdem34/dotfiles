@@ -4,9 +4,9 @@ if command -v yay &>/dev/null; then
   yay -Syu $packages
 elif command -v pacman &>/dev/null; then
   sudo pacman -Syu $packages
-elif command -v apt &>/dev/null; then
-  sudo apt update -y
-  sudo apt install -y $packages
+elif command -v apt-get &>/dev/null; then
+  sudo apt-get update -y
+  sudo apt-get install -y $packages
 fi
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm

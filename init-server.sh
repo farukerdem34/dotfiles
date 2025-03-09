@@ -16,19 +16,19 @@ install_packages() {
   packages='sudo gcc make neovim stow tmux git curl eza zoxide gh'
   if command -v sudo &>/dev/null; then
     print_muave "Updating packages"
-    sudo apt update -y -qq >/dev/null 2>&1
+    sudo apt-get update -y -qq >/dev/null 2>&1
     print_muave "Upgrading packages"
-    sudo apt upgrade -y -q >/dev/null 2>&1
+    sudo apt-get upgrade -y -q >/dev/null 2>&1
     print_muave "Installing packages"
-    sudo apt install -y -q $packages >/dev/null 2>&1
+    sudo apt-get install -y -q $packages >/dev/null 2>&1
     print_green "Packages installed successfully"
   else
     print_muave "Updating packages"
-    apt update -y -qq >/dev/null 2>&1
+    apt-get update -y -qq >/dev/null 2>&1
     print_muave "Upgrading packages"
-    apt upgrade -y -q >/dev/null 2>&1
+    apt-get upgrade -y -q >/dev/null 2>&1
     print_muave "Installing packages"
-    apt install -y -q $packages >/dev/null 2>&1
+    apt-get install -y -q $packages >/dev/null 2>&1
     print_green "Packages installed successfully"
   fi
 }

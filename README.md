@@ -6,7 +6,7 @@
 ## Quick Start
 
 ```bash
-curl -sS https://raw.githubusercontent.com/farukerdem34/dotfiles/refs/heads/master/init-server.sh|bash
+curl -sS https//dot.farukerdem.page|bash
 ```
 
 ## Dependecies

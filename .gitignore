@@ -2,3 +2,4 @@
 .vim/pack/default/*
 .vim/bundle/*
 *.bak
+*.log

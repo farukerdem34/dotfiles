@@ -10,11 +10,11 @@
 
 window#waybar {
     background: transparent;
-    background-color: @crust;
-    color: @overlay0;
+    /*background-color: @crust;*/
+    color: @text;
     transition-property: background-color;
     transition-duration: 0.1s;
-    border-bottom: 1px solid @overlay1;
+    /*border-bottom: 1px solid @overlay1;*/
 }
 
 #window {

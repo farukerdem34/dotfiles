@@ -11,6 +11,7 @@ alias vi='vim'
 
 if [[ $TERM == "xterm-kitty" ]]; then
   alias ssh="kitty +kitten ssh"
+  alias icat="kitten icat "
 fi
 if command -v yay &>/dev/null; then
   alias yayy='yay --noconfirm --color always '

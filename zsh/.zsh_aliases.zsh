@@ -14,6 +14,7 @@ alias vi='vim'
 if [[ $TERM == "xterm-kitty" ]] ;
 then 
     alias ssh="kitty +kitten ssh"
+    alias icat="kitten icat "
 fi
 if  command -v yay &> /dev/null;
 then 
@@ -45,7 +46,7 @@ if  command -v bat &> /dev/null ; then
   alias cat=bat
 fi
 if  command -v fzf &> /dev/null ; then
-  alias fzf='fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'
+  alias fzf='fzf --preview "bat --theme=\"Catppuccin Macchiato\" --color=always  {}"'
   alias vimzf='vim $(fzf)'
 fi
 

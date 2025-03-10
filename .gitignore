@@ -3,4 +3,4 @@
 .vim/bundle/*
 *.bak
 *.log
-btop.log
+btop/.config/btop/*.log

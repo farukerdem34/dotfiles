@@ -9,7 +9,7 @@
 ## Quick Start
 
 ```bash
-curl -sSL https//dot.farukerdem.page|bash
+curl -sSL https://dot.farukerdem.page|bash
 ```
 
 ## Dependecies

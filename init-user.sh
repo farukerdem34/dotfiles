@@ -15,8 +15,10 @@ print_green() {
 alias yayy="yay --noconfirm --color always "
 
 install_hyprland() {
-  packages="hyprland hyprshot hypridle hyprlock hyprpaper aswaync blueberry waybar wofi"
-  yayy $packages
+  if [[ $XDG_SESSION_DESKTOP == "hyprland" ]]; then
+    packages="hyprland hyprshot hypridle hyprlock hyprpaper aswaync blueberry waybar wofi"
+    yayy $packages
+  fi
 }
 
 install_packages() {
@@ -136,6 +138,35 @@ backup() {
     print_muave "Backing up zsh_completion_sources"
     mv ~/.zsh_completion_sources.zsh ~/.zsh_completion_sources.zsh.bak
   fi
+
+  if [[ -e ~/.config/waybar ]]; then
+    print_muave "Backing up waybar"
+    tar -zcvf ~/.config/waybar.bak ~/.config/waybar
+    rm -rf ~/.config/waybar
+  fi
+
+  if [[ -e ~/.config/wofi ]]; then
+    print_muave "Backing up wofi"
+    tar -zcvf ~/.config/wofi.bak ~/.config/wofi
+    rm -rf ~/.config/wofi
+  fi
+
+  if [[ -e ~/.config/swaync ]]; then
+    print_muave "Backing up swaync"
+    tar -zcvf ~/.config/swaync.bak ~/.config/swaync
+    rm -rf ~/.config/swaync
+  fi
+
+  if [[ -e ~/.config/hypr && $XDG_SESSION_DESKTP == "hyprland" ]]; then
+    print_muave "Backing up hypr"
+    tar -zcvf ~/.config/hypr.bak ~/.config/hypr
+    rm -rf ~/.config/hypr
+  fi
+
+  if [[ -e ~/.config/starship.toml ]]; then
+    print_muave "Backing up starship"
+    mv ~/.config/starship.toml ~/.config/starship.toml.bak
+  fi
   print_green "Backups created successfully"
 }
 
@@ -153,6 +184,7 @@ install_lazyvim() {
 }
 
 install_packages
+install_hyprland
 clone_repo
 backup
 stow_packages

@@ -12,6 +12,13 @@ print_green() {
   echo -e "\e[38;2;166;227;161m$1\e[0m"
 }
 
+alias yayy="yay --noconfirm --color always "
+
+install_hyprland() {
+  packages="hyprland hyprshot hypridle hyprlock hyprpaper aswaync blueberry waybar"
+  yayy $packages
+}
+
 install_packages() {
   print_muave "Installing packages"
   packages="stow neovim tmux bat fzf git gcc btop make fastfetch kitty zsh starship lazygit lazydocker zoxide eza"

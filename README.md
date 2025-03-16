@@ -8,8 +8,16 @@
 
 ## Quick Start
 
+### Servers
+
 ```bash
-curl -sSL https://dot.farukerdem.page|bash
+curl -sSL https://dot.farukerdem.page/server |bash
+```
+
+### Desktep Users
+
+```bash
+curl -sSL https://dot.farukerdem.page/user |bash
 ```
 
 ## Dependecies

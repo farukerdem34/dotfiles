@@ -6,7 +6,8 @@
     "logo": {
         "padding": {
             "top": 2
-        }
+        },
+    "source": "/home/faruk/Documents/Skylab/skylab-catppuccin.png"
     },
     "display": {
         "separator": " -> "

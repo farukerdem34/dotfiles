@@ -40,6 +40,15 @@ install_tpm() {
 clone_repo() {
   if [[ -d "$HOME"/.dotfiles ]]; then
     print_muave "$HOME/.dotfiles already exists"
+    read -p "The repository in the $HOME/.dotfiles will be git reset --hard, are you verify this action?" hard_reset
+    if [[ $hard_reset == "yes" ]]; then
+      cd $HOME/.dotfiles || print_red "Failed to change directory to $HOME/.dotfiles"
+      git reset --hard
+      git fetch
+      git pull
+    else
+      print_green "Skipping dotfiles cloning"
+    fi
   else
     print_muave "Cloning dotfiles"
     git clone https://github.com/farukerdem34/dotfiles.git $HOME/.dotfiles -q

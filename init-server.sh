@@ -139,3 +139,5 @@ install_lazydocker
 install_lazygit
 install_starship
 source_bashrc
+print_green "Server setup completed successfully"
+tmux

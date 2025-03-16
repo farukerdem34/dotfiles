@@ -15,15 +15,15 @@ print_green() {
 alias yayy="yay --noconfirm --color always "
 
 install_hyprland() {
-  packages="hyprland hyprshot hypridle hyprlock hyprpaper aswaync blueberry waybar"
+  packages="hyprland hyprshot hypridle hyprlock hyprpaper aswaync blueberry waybar wofi"
   yayy $packages
 }
 
 install_packages() {
   print_muave "Installing packages"
-  packages="stow neovim tmux bat fzf git gcc btop make fastfetch kitty zsh starship lazygit lazydocker zoxide eza"
+  packages="stow neovim tmux bat fzf git gcc btop make fastfetch kitty zsh starship lazygit lazydocker zoxide eza timeshift-autosnap grub-btrfsd inotify-tools timeshift"
   if command -v yay &>/dev/null; then
-    yay -Syu $packages
+    yayy $packages
   elif command -v pacman &>/dev/null; then
     sudo pacman -Syu $packages
     # elif command -v apt-get &>/dev/null; then
@@ -142,7 +142,7 @@ backup() {
 stow_packages() {
   cd ~/.dotfiles || print_red "Failed to change directory to $HOME/.dotfiles"
   print_muave "Stowing packages"
-  stow nvim tmux bat btop fastfetch kitty zsh starship
+  stow bash bat btop fastfetch hypr kitty nvim starship swaync tmux vimrc waybar wofi zsh
   print_green "Packages stowed successfully"
 }
 
@@ -152,5 +152,11 @@ install_lazyvim() {
   print_green "LazyVim installed successfully"
 }
 
+install_packages
+clone_repo
+backup
+stow_packages
+install_tpm
+install_lazyvim
 print_muave "Dotfiles installed successfully"
 tmux

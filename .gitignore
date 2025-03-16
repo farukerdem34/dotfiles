@@ -4,3 +4,5 @@
 *.bak
 *.log
 btop/.config/btop/*.log
+background
+hypr/.config/hypr/background

@@ -16,7 +16,7 @@ alias yayy="yay --noconfirm --color always "
 
 install_hyprland() {
   if [[ $XDG_SESSION_DESKTOP == "hyprland" ]]; then
-    packages="hyprland hyprshot hypridle hyprlock hyprpaper aswaync blueberry waybar wofi"
+    packages="hyprland hyprshot hypridle hyprlock hyprpaper aswaync blueberry waybar wofi cliphist"
     yayy $packages
   fi
 }

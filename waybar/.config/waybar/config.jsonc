@@ -15,8 +15,8 @@
 
     "modules-center": [
         "clock",
-        "custom/scripts",
-        "hyprland/window"
+        "custom/scripts"
+        // "hyprland/window"
     ],
 
     "modules-right": [
@@ -40,13 +40,13 @@
             "1": "󰋜",
             "2": "",
             "3": "",
-            "4": "󰙯",
-            "5": "󰎄",
-            "6": "󰎆",
-            "7": "󰎇",
-            "8": "󰎉",
-            "9": "󰎋",
-            "10": "󰎍",
+            "4": "",
+            "5": "",
+            "6": "",
+            "7": "",
+            "8": "",
+            "9": "",
+            "10": "",
             "urgent": "󰗖",
             "focused": "󰗖",
             "default": "󰋔"

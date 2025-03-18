@@ -2,7 +2,7 @@
  * Updated color scheme using mantle-15 format
  */
 
-@import 'catppuccin.css';
+@import 'mocha.css';
 
 * {
     border: none;
@@ -65,7 +65,7 @@ tooltip label {
 }
 
 #workspaces button:hover {
-    background-color: @base_;
+    background-color: @base;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
 }
 
@@ -146,7 +146,7 @@ tooltip label {
 
 #network.disconnected {
     background-color: @surface0;
-    color: @text_;
+    color: @text;
 }
 
 /* Media modules */
@@ -157,7 +157,7 @@ tooltip label {
 
 #pulseaudio.muted {
     background-color: @surface0;
-    color: @text_;
+    color: @text;
 }
 
 
@@ -212,7 +212,7 @@ tooltip label {
 /* Idle inhibitor module */
 #idle_inhibitor {
     background-color: @surface0;
-    color: @text_;
+    color: @text;
 }
 
 #idle_inhibitor.activated {

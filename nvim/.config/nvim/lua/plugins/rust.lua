@@ -1,16 +1,5 @@
 return {
   {
-    "williamboman/mason.nvim",
-    optional = true,
-    opts = function(_, opts)
-      opts.ensure_installed = opts.ensure_installed or {}
-      vim.list_extend(opts.ensure_installed, { "codelldb" })
-      if diagnostics == "bacon-ls" then
-        vim.list_extend(opts.ensure_installed, { "bacon" })
-      end
-    end,
-  },
-  {
     "mrcjkb/rustaceanvim",
     version = vim.fn.has("nvim-0.10.0") == 0 and "^4" or false,
     ft = { "rust" },
@@ -86,5 +75,16 @@ return {
         )
       end
     end,
+  },
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        bacon_ls = {
+          enabled = diagnostics == "bacon-ls",
+        },
+        rust_analyzer = { enabled = false },
+      },
+    },
   },
 }

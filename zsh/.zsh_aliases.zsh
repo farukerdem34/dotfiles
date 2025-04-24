@@ -62,3 +62,5 @@ alias dc='docker compose'
 export PATH=$PATH:$HOME/.local/bin/
 alias wg='sudo wg'
 alias wg-quick='sudo wg-quick'
+
+alias kali='distrobox enter kali-rolling-latest'

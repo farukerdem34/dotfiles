@@ -27,4 +27,4 @@ curl -sSL https://dot.farukerdem.page/user |bash
 
 ## Cursor
 
-<https://www.gnome-look.org/p/2275750>
+<https://www.gnome-look.org/p/2278420>

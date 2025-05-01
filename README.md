@@ -23,8 +23,8 @@ curl -sSL https://dot.farukerdem.page/user |bash
 
 ## GTK Theme & Icons
 
-[Fausto-Korpsvart/Catppuccin-GTK-Theme](https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme.git)
+<https://github.com/Fausto-Korpsvart/Rose-Pine-GTK-Theme>
 
 ## Cursor
 
-<https://www.gnome-look.org/p/2260616>
+<https://www.gnome-look.org/p/2275750>

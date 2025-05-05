@@ -23,7 +23,7 @@ install_hyprland() {
 
 install_packages() {
   print_muave "Installing packages"
-  packages="stow cliphist neovim tmux bat fzf git gcc btop make fastfetch kitty zsh starship lazygit lazydocker zoxide eza timeshift-autosnap grub-btrfsd inotify-tools timeshift hyprpicker"
+  packages="stow cliphist neovim tmux bat fzf git gcc btop make fastfetch kitty zsh starship lazygit lazydocker zoxide eza timeshift-autosnap grub-btrfsd inotify-tools timeshift hyprpicker brighnessctl"
   if command -v yay &>/dev/null; then
     yayy $packages
   elif command -v pacman &>/dev/null; then

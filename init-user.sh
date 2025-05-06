@@ -16,14 +16,14 @@ alias yayy="yay --noconfirm --color always "
 
 install_hyprland() {
   if [[ $XDG_SESSION_DESKTOP == "hyprland" ]]; then
-    packages="hyprland hyprshot hypridle hyprlock hyprpaper aswaync blueberry waybar wofi cliphist udiskie wlogout light"
+    packages="hyprland hyprshot hypridle hyprlock hyprpaper swaync waybar wofi cliphist udiskie wlogout light xdg-desktop-portal-hyprland brighnessctl hyprpicker cliphist"
     yayy $packages
   fi
 }
 
 install_packages() {
   print_muave "Installing packages"
-  packages="stow cliphist neovim tmux bat fzf git gcc btop make fastfetch kitty zsh starship lazygit lazydocker zoxide eza timeshift-autosnap grub-btrfsd inotify-tools timeshift hyprpicker brighnessctl"
+  packages="stow neovim tmux bat fzf git gcc btop make fastfetch kitty zsh starship lazygit lazydocker zoxide eza timeshift-autosnap grub-btrfsd inotify-tools timeshift "
   if command -v yay &>/dev/null; then
     yayy $packages
   elif command -v pacman &>/dev/null; then

@@ -1,190 +1,223 @@
-/* Solarized Dark Waybar Theme - Floating Style - https://github.com/arkboix/dotfiles
- * Updated color scheme using base-15 format
- */
-
-@import 'rose-pine.css';
+@import "rose-pine.css";
 
 * {
-    border: none;
-    border-radius: 0;
-    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free";
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: JetBrainsMono Nerd Font;
     font-size: 14px;
-    min-height: 0;
-    transition-property: background-color;
-    transition-duration: 0.2s;
+    font-weight: bold;
 }
 
 window#waybar {
-    background-color: rgba(0, 43, 54, 0.0);  
-    color: @rose;
-}
-
-tooltip {
-    background-color: @base;
-    border: 2px solid @foam;
-    border-radius: 8px;
-}
-
-tooltip label {
+	background-color: transparent;
+    /* background-color: @base; */
+    /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
     color: @text;
+    transition-property: background-color;
+    transition-duration: .5s;
 }
 
-/* Floating module style - common properties */
-#workspaces button,
-#mode,
-#clock,
-#cpu,
-#custom-scripts,
-#memory,
-#temperature,
-#battery,
-#network,
-#pulseaudio,
-#tray,
-#custom-media,
-#custom-power,
-#idle_inhibitor,
-#language,
-#backlight,
-#window,
-#disk {
-    margin: 5px 2px;
-    padding: 0 12px;
-    border-radius: 10px;
-    background-color: @base;
-    color: @text;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+window#waybar.hidden {
+    opacity: 0.2;
 }
 
-/* Workspaces module */
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 -3px transparent;
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+}
+
+
+
 #workspaces button {
-    padding: 0 6px;
-    background-color: @base;
+    padding: 0 5px;
+    background-color: transparent;
     color: @rose;
-    min-width: 30px;
 }
 
 #workspaces button:hover {
-    background-color: @base;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    color: @love;
+}
+
+#workspaces button.persistent {
+    color: @rose;
 }
 
 #workspaces button.active {
-    background-color: @rose;
-    color: @base;
-    box-shadow: inset 0 0 0 2px @surface;
-    text-shadow: 0 0 10px @overlay;
+    color: @foam;
+}
+
+
+#workspaces button.deafult {
+    color: @rose;
+}
+
+#workspaces button.empty {
+	color: @subtle;
 }
 
 #workspaces button.urgent {
     background-color: @love;
-    color: @overlay;
 }
 
-/* Clock module, Scripts module and window title */
-#clock, #custom-scripts, #window {
-    background-color: @rose;
-    color: @base;
-    font-weight: bold;
+#mode {
+    background-color: @pine;
+    box-shadow: inset 0 -3px @text;
 }
 
-/* System modules */
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#custom-power
+#mpd {
+    padding: 0 10px;
+    color: @text;
+    margin: 0px;
+}
+
+#window,
+#workspaces {
+    background-color: @base;
+    border-radius: 10px;
+    padding-right: 4px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+#clock {
+    background-color: @base;
+    color: @foam;
+    border-radius: 10px 10px;
+    margin-left: 15px;
+}
+
+#battery {
+    background-color: @base;
+    color: @pine;
+	padding-left: 0px;
+}
+
+#battery.charging, #battery.plugged {
+    color: @foam;
+    background-color: @base;
+	padding-left: 0px;
+}
+
+
+label:focus {
+    background-color: @base;
+}
+
 #cpu {
-    background-color: @foam;
-    color: @base;
-}
-
-/*brightness */
-#backlight {
-    background-color: @foam;
-    color: @base;
+	background-color: @base;
+    	color: @love;
+	margin-left: 3.5px;
+	border-radius: 10px 0px 0px 10px;
 }
 
 #memory {
-    background-color: @foam;
-    color: @base;
+	background-color: @base;
+	color: @gold;
+	padding-left: 0px;
 }
 
-#temperature {
-    background-color: @foam;
-    color: @base;
+#disk {
+    background-color: #964B00;
 }
 
-#temperature.critical {
-    background-color: @love;
-    color: @overlay;
-    animation: blink 1s infinite alternate;
+#backlight {
+    background-color: @base;
+    color: @rose;
+    border-radius: 0px 10px 10px 0px;
+    margin-right: 3.5px;
+	padding-left: 0px;
 }
 
-/* Battery module */
-#battery {
-    background-color: @foam;
-    color: @base;
+#custom-power{
+    background-color: @base;
+    color: @foam;
+    margin-right: 15px;
+    border-radius: 0px 10px 10px 0px;
+	padding-left: 0px;
+	padding-right: 10px;
 }
 
-#battery.charging {
-    background-color: @pine;
-    color: @base;
-}
 
-#battery.warning:not(.charging) {
-    background-color: @gold;
-    color: @base;
-}
-
-#battery.critical:not(.charging) {
-    background-color: @love;
-    color: @overlay;
-    animation: blink 1s infinite alternate;
-}
-
-/* Network module */
 #network {
-    background-color: @rose;
-    color: @base;
+    background-color: @base;
+    color: @foam;
+	padding-left: 0px;
 }
 
 #network.disconnected {
-    background-color: @muted;
-    color: @text;
+    background-color: @base;
+    color: @love;
+    margin-right: 2.5px;
+    border-radius: 0px 10px 10px 0px;
+	padding-left: 0px;
 }
 
-/* Media modules */
 #pulseaudio {
+	background-color: @base;
+	color: @rose;
+	border-radius: 10px 0px 0px 10px;
+}
+
+#pulseaudio.microphone {
+	background-color: @base;
+	color: @rose;
+	border-radius: 0px 0px 0px 0px;
+	padding-left: 0px;
+}
+
+#wireplumber {
     background-color: @rose;
     color: @base;
 }
 
-#pulseaudio.muted {
+#wireplumber.muted {
     background-color: @muted;
-    color: @text;
 }
 
 
-/* Language module */
-#language {
-    background-color: @rose;
-    color: @base;
-    min-width: 40px;
+#temperature {
+	background-color: @base;
+	color: @foam;
+	padding-left: 0px;
 }
 
-/* Custom modules */
-#custom-media {
-    background-color: @rose;
-    color: @base;
-    min-width: 100px;
+#temperature.critical {
+	background-color: @base;
+	color: @love;
+	padding-left: 0px;
 }
 
-#custom-power {
-    background-color: @pine;
-    color: @overlay;
-    margin-right: 6px;
-}
-
-/* System tray */
 #tray {
-    background-color: @rose;
-    color: @base;
+	background-color: @base;
+	border-radius: 10px;
+	margin-left: 3.5px;
 }
 
 #tray > .passive {
@@ -193,30 +226,52 @@ tooltip label {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: @gold;
+    background-color: @love;
 }
 
-/* Disk usage */
-#disk {
-    background-color: @rose;
-    color: @base;
-}
-
-/* Animation for critical indicators */
-@keyframes blink {
-    to {
-        background-color: @yellow;
-        color: @peach;
-    }
-}
-
-/* Idle inhibitor module */
 #idle_inhibitor {
-    background-color: @muted;
-    color: @text;
+    background-color: @overlay;
 }
 
 #idle_inhibitor.activated {
     background-color: @rose;
-    color: @base;
+    color: @overlay;
+}
+
+#mpd {
+    background-color: @iris;
+    color: @foam;
+}
+
+#mpd.disconnected {
+    background-color: @muted;
+}
+
+#mpd.stopped {
+    background-color: @foam;
+}
+
+#mpd.paused {
+    background-color: #51a37a;
+}
+
+#privacy {
+    padding: 0;
+}
+
+#privacy-item {
+    padding: 0 5px;
+    color: white;
+}
+
+#privacy-item.screenshare {
+    background-color: #cf5700;
+}
+
+#privacy-item.audio-in {
+    background-color: #1ca000;
+}
+
+#privacy-item.audio-out {
+    background-color: #0069d4;
 }

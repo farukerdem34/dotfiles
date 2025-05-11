@@ -19,7 +19,6 @@
   ],
   "modules-right": [
     "pulseaudio",
-    "pulseaudio#microphone",
     "backlight",
     "cpu",
     "memory",
@@ -185,7 +184,7 @@
     "format": "{icon}  {volume}%",
     "format-bluetooth": "{volume}% {icon} {format_source}",
     "format-bluetooth-muted": " {icon} {format_source}",
-    "format-muted": " {format_source}",
+    "format-muted": " ",
     "format-icons": {
       "headphone": "",
       "hands-free": "",
@@ -200,11 +199,6 @@
       ]
     },
     "on-click": "pavucontrol"
-  },
-  "pulseaudio#microphone": {
-    "format": "{format_source}",
-    "format-source-muted": "",
-    "format-source": ""
   },
   "custom/power": {
     "format": "⏻ ",

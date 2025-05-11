@@ -185,12 +185,6 @@ label:focus {
 	border-radius: 10px 0px 0px 10px;
 }
 
-#pulseaudio.microphone {
-	background-color: @base;
-	color: @rose;
-	border-radius: 0px 0px 0px 0px;
-	padding-left: 0px;
-}
 
 #wireplumber {
     background-color: @rose;

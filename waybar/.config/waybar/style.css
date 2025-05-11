@@ -132,7 +132,7 @@ label:focus {
 
 #cpu {
 	background-color: @base;
-    	color: @love;
+  color: @iris;
 	margin-left: 3.5px;
 	border-radius: 10px 0px 0px 10px;
 }
@@ -149,7 +149,7 @@ label:focus {
 
 #backlight {
     background-color: @base;
-    color: @rose;
+    color: @text;
     border-radius: 0px 10px 10px 0px;
     margin-right: 3.5px;
 	padding-left: 0px;
@@ -185,27 +185,10 @@ label:focus {
 	border-radius: 10px 0px 0px 10px;
 }
 
-
-#wireplumber {
-    background-color: @rose;
-    color: @base;
-}
-
-#wireplumber.muted {
-    background-color: @muted;
-}
-
-
-#temperature {
-	background-color: @base;
-	color: @foam;
-	padding-left: 0px;
-}
-
-#temperature.critical {
+#pulseaudio.muted {
 	background-color: @base;
 	color: @love;
-	padding-left: 0px;
+	border-radius: 10px 0px 0px 10px;
 }
 
 #tray {
@@ -221,51 +204,4 @@ label:focus {
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
     background-color: @love;
-}
-
-#idle_inhibitor {
-    background-color: @overlay;
-}
-
-#idle_inhibitor.activated {
-    background-color: @rose;
-    color: @overlay;
-}
-
-#mpd {
-    background-color: @iris;
-    color: @foam;
-}
-
-#mpd.disconnected {
-    background-color: @muted;
-}
-
-#mpd.stopped {
-    background-color: @foam;
-}
-
-#mpd.paused {
-    background-color: #51a37a;
-}
-
-#privacy {
-    padding: 0;
-}
-
-#privacy-item {
-    padding: 0 5px;
-    color: white;
-}
-
-#privacy-item.screenshare {
-    background-color: #cf5700;
-}
-
-#privacy-item.audio-in {
-    background-color: #1ca000;
-}
-
-#privacy-item.audio-out {
-    background-color: #0069d4;
 }

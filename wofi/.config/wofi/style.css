@@ -1,15 +1,34 @@
+@define-color base            #191724;
+@define-color surface         #1f1d2e;
+@define-color overlay         #26233a;
+
+@define-color muted           #6e6a86;
+@define-color subtle          #908caa;
+@define-color text            #e0def4;
+
+@define-color love            #eb6f92;
+@define-color gold            #f6c177;
+@define-color rose            #ebbcba;
+@define-color pine            #31748f;
+@define-color foam            #9ccfd8;
+@define-color iris            #c4a7e7;
+
+@define-color highlightLow    #21202e;
+@define-color highlightMed    #403d52;
+@define-color highlightHigh   #524f67;
+
 * {
   font-family: 'JetBrainsMono Nerd Font', monospace;
-  font-size: 14px;
+  font-size: 1.005em;
 }
 
 /* Window */
 window {
   margin: 0px;
   padding: 10px;
-  border: 0.16em solid #ebbcba;
-  border-radius: 0.1em;
-  background-color: #191724;
+  border: 0.16em solid @foam;
+  border-radius: 3em;
+  background-color: @base;
   animation: slideIn 0.5s ease-in-out both;
 }
 
@@ -29,7 +48,7 @@ window {
   margin: 5px;
   padding: 10px;
   border: none;
-  background-color: #191724;
+  background-color: @base;
   animation: fadeIn 0.5s ease-in-out both;
 }
 
@@ -48,8 +67,8 @@ window {
 #outer-box {
   margin: 5px;
   padding: 10px;
-  border: none;
-  background-color: #191724;
+  border-radius: 5em;
+  background-color: @base;
 }
 
 /* Scroll */
@@ -57,7 +76,7 @@ window {
   margin: 0px;
   padding: 10px;
   border: none;
-  background-color: #191724;
+  background-color: @base;
 }
 
 /* Input */
@@ -65,47 +84,47 @@ window {
   margin: 5px 20px;
   padding: 10px;
   border: none;
-  border-radius: 0.1em;
-  color: #e0def4;
-  background-color: #191724;
+  border-radius: 1em;
+  color: @text;
+  background-color: @base;
   animation: fadeIn 0.5s ease-in-out both;
 }
 
 #input image {
     border: none;
-    color: #eb6f92;
+    color: @love;
 }
 
 #input * {
-  outline: 4px solid #eb6f92 !important;
+  outline: 4px solid @love !important;
 }
 
 /* Text */
 #text {
   margin: 5px;
   border: none;
-  color: #e0def4;
+  color: @text;
   animation: fadeIn 0.5s ease-in-out both;
 }
 
 #entry {
-  background-color: #191724;
+  background-color: @base;
 }
 
 #entry arrow {
   border: none;
-  color: #ebbcba;
+  color: @rose;
 }
 
 /* Selected Entry */
 #entry:selected {
-  border: 0.11em solid #9ccfd8;
+  border: 0.11em solid @foam;
 }
 
 #entry:selected #text {
-  color: #9ccfd8;
+  color: @rose;
 }
 
 #entry:drop(active) {
-  background-color: #ebbcba!important;
+  background-color: @foam!important;
 }

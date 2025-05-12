@@ -19,7 +19,7 @@ curl -sSL https://dot.farukerdem.page/user |bash
 
 ## Wallpapers
 
-[farukerdem34/catppuccin-wallpapers](https://github.com/farukerdem34/catppuccin-wallpapers)
+[farukerdem34/wallpapers](https://codeberg.org/farukerdem34/wallpapers)
 
 ## GTK Theme & Icons
 

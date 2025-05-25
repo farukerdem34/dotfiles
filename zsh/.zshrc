@@ -20,7 +20,7 @@ zinit light zsh-users/zsh-autosuggestions
 
 autoload -U compinit && compinit
 
-export PATH=$PATH:$HOME/.local/bin/ 
+export PATH=$PATH:$HOME/.local/bin/:/home/linuxbrew/.linuxbrew/bin
 # History
 HISTFILE=~/.zsh_history
 HISTSIZE=10000

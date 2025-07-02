@@ -13,6 +13,7 @@ done
 print_muave() {
   echo -e "\e[38;2;203;166;247m$1\e[0m"
 }
+
 print_red() {
   echo -e "\e[38;2;243;139;168m$1\e[0m"
   exit
@@ -25,12 +26,20 @@ print_green() {
 install_packages() {
   packages='sudo gcc make neovim stow tmux git curl eza zoxide gh'
   if command -v sudo &>/dev/null; then
+    local update="sudo apt-get update -y"
+    local upgrade="sudo apt-get upgrade -y"
+    local install="sudo apt-get install $packages"
+    if [[ $VERBOSE -ge 1 ]]; then
+      update="$update -qq > /dev/null"
+      upgrade="$upgrade -qq > /dev/null"
+      install="$install -qq > /dev/null"
+    fi
     print_muave "Updating packages"
-    sudo apt-get update -y -qq >/dev/null 2>&1
+    bach -c $update
     print_muave "Upgrading packages"
-    sudo apt-get upgrade -y -q >/dev/null 2>&1
+    bash -c $upgrade
     print_muave "Installing packages"
-    sudo apt-get install -y -q $packages >/dev/null 2>&1
+    bash -c $install
     print_green "Packages installed successfully"
   else
     print_muave "Updating packages"
@@ -45,9 +54,16 @@ install_packages() {
 
 install_tpm() {
   print_muave "Cloning TPM"
-  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm -q
+  local clone_tpm='git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm'
+  local install_plugins="$HOME/.tmux/plugins/tpm/bin/install_plugins"
+
+  if [[ $VERBOSE -le 1 ]]; then
+    clone_tpm="$clone_tpm -q"
+    install_plugins="$install_plugins >/dev/null 2>&1"
+  fi
+  bash -c $clone_tpm
   print_muave "Installing TPM plugins"
-  ~/.tmux/plugins/tpm/bin/install_plugins >/dev/null 2>&1
+  bash -c $install_plugins
   print_green "TPM installed successfully"
 }
 
@@ -56,8 +72,12 @@ clone_repo() {
     print_muave "$HOME/.dotfiles already exists"
     cd "$HOME"/.dotfiles >/dev/null 2>&1 || print_red "Failed to change directory to $HOME/.dotfiles"
   else
+    local clone_dotfiles="git clone https://github.com/farukerdem34/dotfiles.git $HOME/.dotfiles"
+    if [[ $VERBOSE -ge 1 ]]; then
+      clone_dotfiles="$clone_dotfiles -q"
+    fi
     print_muave "Cloning dotfiles"
-    git clone https://github.com/farukerdem34/dotfiles.git $HOME/.dotfiles -q
+    bash -c $clone_dotfiles
     cd $HOME/.dotfiles >/dev/null 2>&1 || print_red "Failed to change directory to $HOME/.dotfiles"
     print_green "Dotfiles cloned successfully"
   fi
@@ -103,23 +123,39 @@ install_lazyvim_packages() {
 install_lazygit() {
   print_muave "Installing LazyGit"
   LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | \grep -Po '"tag_name": *"v\K[^"]*')
-  curl -sLo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/download/v${LAZYGIT_VERSION}/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
-  tar xf lazygit.tar.gz lazygit >/dev/null 2>&1
-  sudo install lazygit -D -t /usr/local/bin/ >/dev/null 2>&1
+  local install_targz="curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/download/v${LAZYGIT_VERSION}/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz""
+  local extract_targz="tar xf lazygit.tar.gz lazygit"
+  local install_lazygit_cmd="sudo install lazygit -D -t /usr/local/bin/"
+  if [[ $VERBOSE -ge 1 ]]; then
+    install_targz="$install_targz -s"
+    extract_targz="$extract_targz >/dev/null 2>&1"
+    install_lazygit_cmd="$install_lazygit_cmd >/dev/null 2>&1"
+  fi
+  bash -c $install_targz
+  bash -c $extract_targz
+  bash -c $install_lazygit_cmd
   print_green "LazyGit installed successfully"
 }
 
 # Install Docker
 install_docker() {
   print_muave "Installing Docker"
-  curl -s https://get.docker.com | bash >/dev/null 2>&1
+  local verbosity=""
+  if [[ $VERBOSE -ge 1 ]]; then
+    local verbosity=">/dev/null 2>&"
+  fi
+  curl -s https://get.docker.com | bash $verbosity
   print_green "Docker installed successfully"
 }
 
 # Install LazyDocker
 install_lazydocker() {
   print_muave "Installing LazyDocker"
-  curl -s https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash >/dev/null 2>&1
+  local verbosity=""
+  if [[ $VERBOSE -ge 1 ]]; then
+    local verbosity=">/dev/null 2>&"
+  fi
+  curl -s https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash $verbosity
   print_green "LazyDocker installed successfully"
 }
 

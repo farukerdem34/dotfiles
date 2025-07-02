@@ -1,7 +1,6 @@
 
 ![desktop](./assets/desktop.png)
 ![desktop2](./assets/desktop2.png)
-![tmux](./assets/tmux.png)
 ![nvim](./assets/nvim.png)
 
 ## Quick Start

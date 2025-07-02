@@ -1,5 +1,15 @@
 #!/bin/bash
 
+VERBOSE=0
+
+while getopts "v" opt; do
+  case $opt in
+  v)
+    VERBOSE=$((VERBOSE + 1))
+    ;;
+  esac
+done
+
 print_muave() {
   echo -e "\e[38;2;203;166;247m$1\e[0m"
 }

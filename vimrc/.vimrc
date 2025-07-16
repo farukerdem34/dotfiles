@@ -1,6 +1,3 @@
-call plug#begin()
-Plug 'catppuccin/vim', { 'as': 'catppuccin' }
-call plug#end()
 set nocompatible
 
 filetype on
@@ -65,6 +62,4 @@ set wildmode=list:longest
 " There are certain files that we would never want to edit with Vim.
 " Wildmenu will ignore files with these extensions.
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
-
-
-set background=transparent
+colorscheme catppuccin_macchiato

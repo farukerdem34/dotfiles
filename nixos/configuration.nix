@@ -11,7 +11,7 @@
     ];
 
 
-
+  boot.extraModulePackages = [ hotfix_kvadra_touchpad ];
   # Experimental Features
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # Bootloader.
@@ -169,6 +169,9 @@ lazydocker
 hcloud
 ansible
 kubectl
+python3Full
+nodejs_24
+rustup
   ];
 #programs.neovim.defaultEditor = true;
   # Some programs need SUID wrappers, can be configured further or are

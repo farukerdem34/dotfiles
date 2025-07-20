@@ -169,9 +169,10 @@ lazydocker
 hcloud
 ansible
 kubectl
-python3Full
-nodejs_24
-rustup
+python3Full# Lazyvim
+nodejs_24# Lazyvim
+rustup# Lazyvim
+unzip# Lazyvim
   ];
 #programs.neovim.defaultEditor = true;
   # Some programs need SUID wrappers, can be configured further or are

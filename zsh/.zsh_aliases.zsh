@@ -42,7 +42,7 @@ alias ff='fastfetch -c $HOME/.config/fastfetch/config.jsonc'
 fi
 
 if  command -v bat &> /dev/null ; then
-  alias bat='bat --theme="Catppuccin Macchiato" --color=always -p '
+  alias bat='bat --theme="Dracula" --color=always -p '
   alias cat=bat
 fi
 if  command -v fzf &> /dev/null ; then

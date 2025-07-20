@@ -11,7 +11,7 @@
     ];
 
 
-  boot.extraModulePackages = [ hotfix_kvadra_touchpad ];
+  # boot.extraModulePackages = [ "hotfix_kvadra_touchpad" ];
   # Experimental Features
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # Bootloader.

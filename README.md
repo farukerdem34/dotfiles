@@ -28,3 +28,31 @@ curl -sSL https://dot.farukerdem.page/user |bash
 ## Cursor
 
 <https://www.gnome-look.org/p/2260616>
+
+## NixOS
+
+```bash
+nix-shell -p git stow # Get nix-shell first
+
+mv $HOME/.bashrc{,.bak}
+
+mv $HOME/.bash_aliases{,.bak}
+
+stow bash\
+bat\
+btop\
+fastfetch\
+hypr\
+kitty\
+nvim\
+starship\
+swaync\
+tmux\
+vimrc\
+waybar\
+wofi\
+zsh
+
+sudo mv /etc/nixos/configuration.nix{,.bak}
+sudo stow -t / nixos
+```

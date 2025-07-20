@@ -116,7 +116,6 @@ virtualisation.docker.enable = true;
   # $ nix search wget
   environment.systemPackages = with pkgs; [
 # Base
-vim
 wget
 firefox
 kitty
@@ -174,6 +173,9 @@ nodejs_24# Lazyvim
 rustup# Lazyvim
 unzip# Lazyvim
   ];
+  programs.vim.enable = true;
+  programs.vim.defaultEditor = true;
+  programs.neovim.vimAlias = true;
 #programs.neovim.defaultEditor = true;
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

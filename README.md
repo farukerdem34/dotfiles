@@ -32,7 +32,7 @@ curl -sSL https://dot.farukerdem.page/user |bash
 ## NixOS
 
 ```bash
-nix-shell -p git stow # Get nix-shell first
+nix-shell -p git stow gcc # Get nix-shell first
 
 mv $HOME/.bashrc{,.bak}
 

@@ -10,7 +10,10 @@
       ./hardware-configuration.nix
     ];
 
-
+  nix.settings = {
+    max-jobs = "auto";     # Çekirdek sayısına göre otomatik
+    cores = 0;             # Tüm CPU çekirdeklerini kullan
+  };
   # boot.extraModulePackages = [ "hotfix_kvadra_touchpad" ];
   # Experimental Features
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

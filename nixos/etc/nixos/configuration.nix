@@ -51,8 +51,8 @@
     LC_TELEPHONE = "tr_TR.UTF-8";
     LC_TIME = "tr_TR.UTF-8";
   };
-# Flatpak
-services.flatpak.enable = true;
+  # Flatpak
+  services.flatpak.enable = true;
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
@@ -102,11 +102,11 @@ services.flatpak.enable = true;
     ];
   };
 
-# Development - libvirtd
-programs.virt-manager.enable = true;
-virtualisation.libvirtd.enable = true;
-virtualisation.spiceUSBRedirection.enable = true;
-virtualisation.docker.enable = true;
+  # Development - libvirtd
+  programs.virt-manager.enable = true;
+  virtualisation.libvirtd.enable = true;
+  virtualisation.spiceUSBRedirection.enable = true;
+  virtualisation.docker.enable = true;
 
 
   # Install firefox.
@@ -119,67 +119,67 @@ virtualisation.docker.enable = true;
   # $ nix search wget
   environment.systemPackages = with pkgs; [
 # Base
-wget
-firefox
-kitty
-tmux
-stow
-git
-bat
-btop
-wireguard-tools
-teamspeak3
-qbittorrent
+  wget
+  firefox
+  kitty
+  tmux
+  stow
+  git
+  bat
+  btop
+  wireguard-tools
+  teamspeak3
+  qbittorrent
 # Corprete Hell 
-teams-for-linux
-thunderbird
-obsidian
-libreoffice
-spotify
+  teams-for-linux
+  thunderbird
+  obsidian
+  libreoffice
+  spotify
 # Fancy Shell
-zsh
-starship
-eza
-zoxide
-neovim
-fastfetch
-fzf
-ripgrep
-fd
-imagemagick
-sassc # Front-end for libsass. for gtk theme installation
+  zsh
+  starship
+  eza
+  zoxide
+  neovim
+  fastfetch
+  fzf
+  ripgrep
+  fd
+  imagemagick
 # Hyprland
-hyprpaper
-hyprlock
-hypridle
-hyprshot
-xdg-desktop-portal-hyprland
-waybar
-wofi
-wlogout
-pkgs.nerd-fonts.jetbrains-mono
-networkmanagerapplet
-blueman
-nwg-look
-wl-clipboard
-cliphist
-udiskie
+  hyprpaper
+  hyprlock
+  hypridle
+  hyprshot
+  xdg-desktop-portal-hyprland
+  waybar
+  wofi
+  wlogout
+  pkgs.nerd-fonts.jetbrains-mono
+  networkmanagerapplet
+  blueman
+  nwg-look
+  wl-clipboard
+  cliphist
+  udiskie
+  sassc # Front-end for libsass. for gtk theme installation
 # Development
-virt-manager
-lazygit
-lazydocker
-hcloud
-ansible
-kubectl
-python3Full# Lazyvim
-nodejs_24# Lazyvim
-rustup# Lazyvim
-unzip# Lazyvim
+  virt-manager
+  lazygit
+  lazydocker
+  hcloud
+  ansible
+  kubectl
+  python3Full# Lazyvim
+  nodejs_24# Lazyvim
+  rustup# Lazyvim
+  unzip# Lazyvim
   ];
   programs.vim.enable = true;
   programs.vim.defaultEditor = true;
   programs.neovim.vimAlias = true;
-#programs.neovim.defaultEditor = true;
+  #programs.neovim.defaultEditor = true;
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;

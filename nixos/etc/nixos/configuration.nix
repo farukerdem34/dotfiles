@@ -171,6 +171,7 @@
   lazydocker
   hcloud
   ansible
+  terraform
   kubectl
   python3Full# Lazyvim
   nodejs_24# Lazyvim

@@ -164,6 +164,7 @@
   cliphist
   udiskie
   sassc # Front-end for libsass. for gtk theme installation
+  pavucontrol
 # Development
   virt-manager
   lazygit

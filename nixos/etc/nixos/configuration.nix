@@ -97,7 +97,12 @@
   users.users.faruk = {
     isNormalUser = true;
     description = "faruk";
-    extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd"];
+    extraGroups = [ 
+      "networkmanager"
+      "wheel" 
+      "libvirtd"
+      # "docker"
+    ];
     packages = with pkgs; [
     ];
   };
@@ -106,7 +111,7 @@
   programs.virt-manager.enable = true;
   virtualisation.libvirtd.enable = true;
   virtualisation.spiceUSBRedirection.enable = true;
-  virtualisation.docker.enable = true;
+  # virtualisation.docker.enable = true;
   virtualisation.podman.enable = true;
 
 
@@ -169,7 +174,7 @@
 # Development
   virt-manager
   lazygit
-  lazydocker
+  # lazydocker
   hcloud
   ansible
   terraform

@@ -23,3 +23,9 @@ if command -v rustup &> /dev/null;
 then
     source <(rustup completions zsh)
 fi
+
+
+if command -v docker &> /dev/null;
+then
+    source <(podman completion zsh)
+fi

@@ -103,3 +103,4 @@ fi
 eval "$(starship init bash)"
 
 export _ZO_DOCTOR=0
+export PODMAN_COMPOSE_PROVIDER=$(which podman-compose)

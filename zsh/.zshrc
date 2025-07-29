@@ -31,3 +31,4 @@ source ~/.zsh_aliases.zsh
 source ~/.zsh_completion_sources.zsh
 
 eval "$(starship init zsh)"
+export PODMAN_COMPOSE_PROVIDER=$(which podman-compose)

@@ -26,13 +26,18 @@
 
   networking.hostName = "lomaroid"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
   networking.networkmanager.enable = true;
+  networking.networkmanager = {
+    dns = "none";
+    insertNameservers = ["192.168.1.254" "9.9.9.9"];
+  };
+
+  environment.etc.hosts.mode = "0644";
 
   # Set your time zone.
   time.timeZone = "Europe/Istanbul";
@@ -189,6 +194,7 @@
   programs.vim.enable = true;
   programs.vim.defaultEditor = true;
   programs.neovim.vimAlias = true;
+  programs.nix-ld.enable = true;
   #programs.neovim.defaultEditor = true;
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

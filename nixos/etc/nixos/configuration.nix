@@ -190,6 +190,7 @@
   nodejs_24# Lazyvim
   rustup# Lazyvim
   unzip# Lazyvim
+  luajitPackages.luarocks # Lazyvim
   ];
   programs.vim.enable = true;
   programs.vim.defaultEditor = true;

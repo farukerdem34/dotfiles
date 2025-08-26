@@ -8,6 +8,8 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./packages.nix
+      ./virtualization.nix
     ];
 
   nix.settings = {
@@ -66,7 +68,7 @@
   services.xserver.desktopManager.gnome.enable = true;
   # Hyprland
   programs.hyprland.enable = true;
-
+  services.hardware.bolt.enable = true;
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "tr";
@@ -106,19 +108,10 @@
       "networkmanager"
       "wheel" 
       "libvirtd"
-      # "docker"
     ];
     packages = with pkgs; [
     ];
   };
-
-  # Development - libvirtd
-  programs.virt-manager.enable = true;
-  virtualisation.libvirtd.enable = true;
-  virtualisation.spiceUSBRedirection.enable = true;
-  # virtualisation.docker.enable = true;
-  virtualisation.podman.enable = true;
-
 
   # Install firefox.
   programs.firefox.enable = true;
@@ -128,82 +121,10 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-# Base
-  wget
-  firefox
-  kitty
-  tmux
-  stow
-  git
-  bat
-  btop
-  wireguard-tools
-  teamspeak3
-  qbittorrent
-# Corprete Hell 
-  teams-for-linux
-  thunderbird
-  obsidian
-  libreoffice
-  spotify
-# Fancy Shell
-  zsh
-  starship
-  eza
-  zoxide
-  neovim
-  fastfetch
-  fzf
-  ripgrep
-  fd
-  imagemagick
-# Hyprland
-  hyprpaper
-  hyprlock
-  hypridle
-  hyprshot
-  xdg-desktop-portal-hyprland
-  waybar
-  wofi
-  wlogout
-  pkgs.nerd-fonts.jetbrains-mono
-  networkmanagerapplet
-  blueman
-  nwg-look
-  wl-clipboard
-  cliphist
-  udiskie
-  sassc # Front-end for libsass. for gtk theme installation
-  pavucontrol
-# Development
-  virt-manager
-  lazygit
-  # lazydocker
-  podman-compose
-  buildah
-  hcloud
-  ansible
-  terraform
-  kubectl
-  python3Full# Lazyvim
-  nodejs_24# Lazyvim
-  rustup# Lazyvim
-  unzip# Lazyvim
-  luajitPackages.luarocks # Lazyvim
-  ];
   programs.vim.enable = true;
   programs.vim.defaultEditor = true;
   programs.neovim.vimAlias = true;
   programs.nix-ld.enable = true;
-  #programs.neovim.defaultEditor = true;
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
 
   # List services that you want to enable:
 

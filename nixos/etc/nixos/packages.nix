@@ -14,6 +14,8 @@
   wireguard-tools
   teamspeak3
   qbittorrent
+  yt-dlp
+  ffmpeg
 # Corprete Hell 
   teams-for-linux
   easyeffects
@@ -37,6 +39,7 @@
   hyprlock
   hypridle
   hyprshot
+  hyprpicker
   xdg-desktop-portal-hyprland
   waybar
   wofi
@@ -53,11 +56,15 @@
 # Development
   virt-manager
   lazygit
+  nmap
+  dnslookup
+  jq
   # lazydocker
   podman-compose
   buildah
   hcloud
   ansible
+  sshpass
   terraform
   kubectl
   python3Full# Lazyvim

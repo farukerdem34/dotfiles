@@ -16,6 +16,7 @@
   qbittorrent
 # Corprete Hell 
   teams-for-linux
+  easyeffects
   thunderbird
   obsidian
   libreoffice

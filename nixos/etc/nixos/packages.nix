@@ -34,45 +34,5 @@
   ripgrep
   fd
   imagemagick
-# Hyprland
-  hyprpaper
-  hyprlock
-  hypridle
-  hyprshot
-  hyprpicker
-  xdg-desktop-portal-hyprland
-  waybar
-  wofi
-  wlogout
-  pkgs.nerd-fonts.jetbrains-mono
-  networkmanagerapplet
-  blueman
-  nwg-look
-  wl-clipboard
-  cliphist
-  udiskie
-  sassc # Front-end for libsass. for gtk theme installation
-  pavucontrol
-  brightnessctl
-# Development
-  virt-manager
-  lazygit
-  nmap
-  dnslookup
-  jq
-  # lazydocker
-  podman-compose
-  buildah
-  hcloud
-  ansible
-  sshpass
-  terraform
-  kubectl
-  python3Full# Lazyvim
-  nodejs_24# Lazyvim
-  rustup# Lazyvim
-  unzip# Lazyvim
-  luajitPackages.luarocks # Lazyvim
   ];
-
 }

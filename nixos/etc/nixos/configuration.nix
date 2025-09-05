@@ -11,6 +11,7 @@
       ./packages.nix
       ./virtualization.nix
       ./hyprland.packages.nix
+      ./development.packages.nix
     ];
 
   nix.settings = {

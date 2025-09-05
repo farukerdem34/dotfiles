@@ -53,6 +53,7 @@
   udiskie
   sassc # Front-end for libsass. for gtk theme installation
   pavucontrol
+  brightnessctl
 # Development
   virt-manager
   lazygit

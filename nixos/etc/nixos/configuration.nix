@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       ./packages.nix
       ./virtualization.nix
+      ./hyprland.packages.nix
     ];
 
   nix.settings = {

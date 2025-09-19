@@ -24,7 +24,7 @@ print_green() {
 }
 
 install_packages() {
-  packages='sudo gcc make neovim stow tmux git curl eza zoxide gh'
+  packages='sudo stow tmux git curl eza zoxide '
   if command -v sudo &>/dev/null; then
     local update="sudo apt-get update -y"
     local upgrade="sudo apt-get upgrade -y"
@@ -95,12 +95,6 @@ backup_dots() {
     mv -u "$HOME"/.tmux.conf .tmux.conf.bak
     print_green ".tmux.conf backed up successfully"
   fi
-
-  if [[ -e "$HOME"/.config/nvim ]]; then
-    print_muave "Backing up .config/nvim"
-    rm -rf "$HOME"/.config/nvim
-    print_green ".config/nvim backed up successfully"
-  fi
 }
 
 stow_packages() {
@@ -111,12 +105,6 @@ stow_packages() {
   stow bash tmux
   print_green "Packages stowed successfully"
 
-}
-
-install_lazyvim_packages() {
-  print_muave "Installing LazyVim packages"
-  nvim --headless "+Lazy! sync" +qa
-  print_green "LazyVim packages installed successfully"
 }
 
 # Install Lazygit
@@ -135,28 +123,6 @@ install_lazygit() {
   bash -c $extract_targz
   bash -c $install_lazygit_cmd
   print_green "LazyGit installed successfully"
-}
-
-# Install Docker
-install_docker() {
-  print_muave "Installing Docker"
-  local verbosity=""
-  if [[ $VERBOSE -ge 1 ]]; then
-    local verbosity=">/dev/null 2>&"
-  fi
-  curl -s https://get.docker.com | bash $verbosity
-  print_green "Docker installed successfully"
-}
-
-# Install LazyDocker
-install_lazydocker() {
-  print_muave "Installing LazyDocker"
-  local verbosity=""
-  if [[ $VERBOSE -ge 1 ]]; then
-    local verbosity=">/dev/null 2>&"
-  fi
-  curl -s https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash $verbosity
-  print_green "LazyDocker installed successfully"
 }
 
 # Install Starship
@@ -180,10 +146,7 @@ clone_repo
 backup_dots
 stow_packages
 install_tpm
-install_docker
-install_lazydocker
 install_lazygit
 install_starship
 source_bashrc
 print_green "Server setup completed successfully"
-tmux

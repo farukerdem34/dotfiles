@@ -25,7 +25,7 @@ then
 fi
 
 
-if command -v docker &> /dev/null;
+if command -v podman&> /dev/null;
 then
     source <(podman completion zsh)
 fi

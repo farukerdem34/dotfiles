@@ -108,6 +108,7 @@
       "networkmanager"
       "wheel" 
       "libvirtd"
+      "docker"
     ];
     packages = with pkgs; [
     ];

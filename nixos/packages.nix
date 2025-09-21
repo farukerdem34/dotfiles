@@ -1,0 +1,1 @@
+etc/nixos/packages.nix

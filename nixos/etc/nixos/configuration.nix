@@ -55,8 +55,6 @@
     LC_TELEPHONE = "tr_TR.UTF-8";
     LC_TIME = "tr_TR.UTF-8";
   };
-  # Flatpak
-  services.flatpak.enable = true;
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 

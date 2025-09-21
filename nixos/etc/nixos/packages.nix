@@ -2,6 +2,8 @@
 
 {
  environment.systemPackages = with pkgs; [
+  # Flatpak
+  services.flatpak.enable = true;
 # Base
   wget
   firefox

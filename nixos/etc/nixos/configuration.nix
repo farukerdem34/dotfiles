@@ -9,7 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./packages.nix
-      ./hyprland.packages.nix
+      ./hyprland.nix
       ./virtualization.nix
     ];
 
@@ -62,8 +62,6 @@
   # services.xserver.displayManager.gdm.enable = true;
   services.displayManager.ly.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
-  # Hyprland
-  programs.hyprland.enable = true;
   services.hardware.bolt.enable = true;
   # Configure keymap in X11
   services.xserver.xkb = {

@@ -17,7 +17,6 @@
     max-jobs = "auto";     # Çekirdek sayısına göre otomatik
     cores = 0;             # Tüm CPU çekirdeklerini kullan
   };
-  # boot.extraModulePackages = [ "hotfix_kvadra_touchpad" ];
   # Experimental Features
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # Bootloader.
@@ -29,9 +28,6 @@
 
   networking.hostName = "lomaroid"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
   networking.networkmanager.enable = true;

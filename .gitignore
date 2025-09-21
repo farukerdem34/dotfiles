@@ -6,3 +6,4 @@
 btop/.config/btop/*.log
 background
 hypr/.config/hypr/background
+nixos/etc/nixos/result

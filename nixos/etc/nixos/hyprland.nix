@@ -2,6 +2,8 @@
 { config, pkgs, ... }:
 
 {
+  # Hyprland
+  programs.hyprland.enable = true;
  environment.systemPackages = with pkgs; [
 # Hyprland
   hyprpaper

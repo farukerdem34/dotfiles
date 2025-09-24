@@ -1,1 +1,0 @@
-etc/nixos/hyprland.packages.nix

@@ -5,6 +5,7 @@
 { config, pkgs, ... }:
 
 {
+  boot.loader.systemd-boot.configurationLimit = 5;
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix

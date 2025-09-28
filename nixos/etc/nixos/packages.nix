@@ -20,7 +20,7 @@
   ffmpeg
 # Corprete Hell 
   teams-for-linux
-  easyeffects
+  # easyeffects
   thunderbird
   obsidian
   libreoffice

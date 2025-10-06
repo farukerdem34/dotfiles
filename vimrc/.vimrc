@@ -8,6 +8,19 @@ filetype indent on
 
 syntax on
 
+set smarttab 
+
+set wrap 
+
+filetype plugin on
+
+filetype indent on
+
+set ruler
+
+set lazyredraw
+
+
 set number
 
 " Set shift width to 4 spaces.

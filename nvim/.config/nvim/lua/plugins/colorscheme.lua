@@ -14,6 +14,7 @@ return {
       gitsigns = true,
       headlines = true,
       illuminate = true,
+      transparent_background = true,
       indent_blankline = { enabled = true },
       leap = true,
       lsp_trouble = true,
@@ -45,7 +46,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin-macchiato",
+      colorscheme = "catppuccin-frappe",
     },
   },
 }

@@ -34,7 +34,7 @@
   networking.networkmanager.enable = true;
   networking.networkmanager = {
     dns = "none";
-    insertNameservers = ["192.168.1.254" "9.9.9.9"];
+    insertNameservers = ["1.1.1.1" "1.0.0.1"];
   };
 
   environment.etc.hosts.mode = "0644";
@@ -60,9 +60,8 @@
   services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
-  # services.xserver.displayManager.gdm.enable = true;
-  # services.xserver.desktopManager.gnome.enable = true;
-  services.xserver.desktopManager.pantheon.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
   services.hardware.bolt.enable = true;
   # Configure keymap in X11
   services.xserver.xkb = {

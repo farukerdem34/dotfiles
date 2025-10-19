@@ -49,12 +49,14 @@
   ansible
   sshpass
   terraform
-  kubectl
   python3Full# Lazyvim
   nodejs_24# Lazyvim
   rustup# Lazyvim
   unzip# Lazyvim
   luajitPackages.luarocks # Lazyvim
+  # Kubernetes 
+  kubectl
+  minikube
   ];
 
 }

@@ -2,6 +2,7 @@
 if  command -v kubectl &> /dev/null;
 then 
     source <(kubectl completion zsh)
+    export KUBECONFIG=~/.kube/config
 fi
 
 if  command -v hcloud &> /dev/null;
@@ -28,4 +29,19 @@ fi
 if command -v podman&> /dev/null;
 then
     source <(podman completion zsh)
+fi
+
+if command -v minikube&> /dev/null;
+then
+    source <(minikube completion zsh)
+fi
+
+if command -v k3s&> /dev/null;
+then
+    source <(k3s completion zsh)
+fi
+
+if command -v buildah&> /dev/null;
+then
+    source <(buildah completion zsh)
 fi

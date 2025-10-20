@@ -55,8 +55,9 @@
   unzip# Lazyvim
   luajitPackages.luarocks # Lazyvim
   # Kubernetes 
-  kubectl
-  minikube
+  # kubectl
+  # minikube
+  k3s
   ];
 
 }

@@ -23,3 +23,13 @@ if command -v docker &> /dev/null;
 then
 eval "$(podman completion bash)"
 fi
+
+if command -v k0s &> /dev/null;
+then
+eval "$(k0s completion bash)"
+fi
+
+if command -v k3s &> /dev/null;
+then
+eval "$(k3s completion bash)"
+fi

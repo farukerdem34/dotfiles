@@ -41,6 +41,11 @@ then
     source <(k3s completion zsh)
 fi
 
+if command -v k0s&> /dev/null;
+then
+    source <(k0s completion zsh)
+fi
+
 if command -v buildah&> /dev/null;
 then
     source <(buildah completion zsh)

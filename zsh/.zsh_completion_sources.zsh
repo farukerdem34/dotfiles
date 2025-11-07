@@ -46,6 +46,11 @@ then
     source <(k0s completion zsh)
 fi
 
+if command -v helm&> /dev/null;
+then
+    source <(helm completion zsh)
+fi
+
 if command -v buildah&> /dev/null;
 then
     source <(buildah completion zsh)

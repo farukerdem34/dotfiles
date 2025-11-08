@@ -18,6 +18,7 @@
   qbittorrent
   yt-dlp
   ffmpeg
+  os-prober
 # Corprete Hell 
   teams-for-linux
   # easyeffects
@@ -36,6 +37,8 @@
   ripgrep
   fd
   imagemagick
+  jq
+  yq
 # Development
   virt-manager
   lazygit
@@ -55,9 +58,9 @@
   unzip# Lazyvim
   luajitPackages.luarocks # Lazyvim
   # Kubernetes 
-  # kubectl
-  # minikube
-  k3s
+  kubectl
+  minikube
+  k9s
   ];
 
 }

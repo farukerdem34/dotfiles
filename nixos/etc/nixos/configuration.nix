@@ -103,6 +103,8 @@
       "wheel" 
       "libvirtd"
       "docker"
+      "dialout"
+      "tty"
     ];
     packages = with pkgs; [
     ];

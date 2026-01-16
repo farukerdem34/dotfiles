@@ -21,7 +21,7 @@ fi
 
 if command -v docker &> /dev/null;
 then
-eval "$(podman completion bash)"
+eval "$(docker completion bash)"
 fi
 
 if command -v k0s &> /dev/null;

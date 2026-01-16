@@ -33,3 +33,9 @@ source ~/.zsh_completion_sources.zsh
 
 eval "$(starship init zsh)"
 export PODMAN_COMPOSE_PROVIDER=$(which podman-compose)
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/faruk/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
+alias garak='/Users/faruk/.local/share/garak/.venv/bin/garak'

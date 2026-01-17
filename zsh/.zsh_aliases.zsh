@@ -32,24 +32,6 @@ if command -v nvim &> /dev/null; then
   alias vim=nvim
 fi
 
-if  command -v wg &> /dev/null ; then
-  alias wg='sudo wg'
-  alias wg-quick='sudo wg-quick'
-fi
-
-if  command -v fastfetch &> /dev/null ; then
-alias ff='fastfetch -c $HOME/.config/fastfetch/config.jsonc'
-fi
-
-if  command -v bat &> /dev/null ; then
-  alias bat='bat --theme="Dracula" --color=always -p '
-  alias cat=bat
-fi
-if  command -v fzf &> /dev/null ; then
-  alias fzf='fzf --preview "bat --theme=\"Catppuccin Macchiato\" --color=always  {}"'
-  alias vimzf='vim $(fzf)'
-fi
-
 if command -v lazygit &> /dev/null; then
   alias lzg="lazygit"
 fi
@@ -62,5 +44,3 @@ alias dc='docker compose'
 export PATH=$PATH:$HOME/.local/bin/
 alias wg='sudo wg'
 alias wg-quick='sudo wg-quick'
-
-alias kali='distrobox enter kali-rolling-latest'

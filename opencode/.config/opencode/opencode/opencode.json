@@ -1,0 +1,47 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "dart": {
+      "command": [
+        "dart",
+        "mcp-server"
+      ],
+      "type": "local",
+      "enabled":false
+    },
+    "nextjs-devtools": {
+      "command": [
+        "bunx",
+        "next-devtools-mcp@latest"
+      ],
+      "type": "local"
+    },
+    "playwright": {
+      "command": [
+        "npx",
+        "@playwright/mcp@0.0.68"
+      ],
+      "type": "local"
+    },
+    "serena": {
+      "command": [
+        "uvx",
+        "--from",
+        "git+https://github.com/oraios/serena",
+        "serena",
+        "start-mcp-server",
+        "--context",
+        "agent"
+      ],
+      "type": "local"
+    },
+    "stitch": {
+      "enabled": false,
+      "headers": {
+        "X-Goog-Api-Key": "AQ.Ab8RN6L4ypE1RmD2kzgKX3jJF8H1I8oX-nUufdbf4nhr7Gu1yQ"
+      },
+      "type": "remote",
+      "url": "https://stitch.googleapis.com/mcp"
+    }
+  }
+}

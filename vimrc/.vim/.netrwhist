@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/Users/faruk/.dotfiles/opencode/.config/opencode'
+let g:netrw_dirhist_6='/Users/faruk/.cargo/bin'
+let g:netrw_dirhist_5='/Users/faruk/Projeler/apire-bulk-tester/.git'
+let g:netrw_dirhist_4='/Users/faruk/RustroverProjects/wireguard-install/.git'
+let g:netrw_dirhist_3='/Users/faruk/.dotfiles/zsh/.zsh'
+let g:netrw_dirhist_2='/root/.dotfiles/vimrc'
+let g:netrw_dirhist_1='/root/.dotfiles/vimrc/.vim'

@@ -39,5 +39,5 @@ export NVM_DIR="$HOME/.nvm"
 
 # Flutter Start
 export PATH=$PATH:$HOME/.flutter/flutter/bin
-export CHROME_EXECUTABLE=/Applications/Safari.app/Contents/MacOS/Safari
+#export CHROME_EXECUTABLE=/Applications/Safari.app/Contents/MacOS/Safari
 # Flutter End

@@ -34,6 +34,14 @@
         "agent"
       ],
       "type": "local"
+    },
+    "sequential-thinking": {
+      "type": "local",
+      "command": [
+        "bunx",
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ]
     }
   }
 }

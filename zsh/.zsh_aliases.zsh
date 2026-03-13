@@ -44,3 +44,10 @@ alias dc='docker compose'
 export PATH=$PATH:$HOME/.local/bin/
 alias wg='sudo wg'
 alias wg-quick='sudo wg-quick'
+
+# UV
+if command -v uv &> /dev/null;
+then
+    alias pip='uv pip'
+    alias pip3='uv pip'
+fi

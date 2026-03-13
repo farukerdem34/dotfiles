@@ -9,3 +9,4 @@ hypr/.config/hypr/background
 nixos/etc/nixos/result
 .DS_Store
 opencode/.config/opencode.json
+/opencode/.config/opencode/node_modules
